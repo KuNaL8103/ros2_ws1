@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<!--
+  xacro source of truth. Expand with:
+      xacro robot.urdf.xacro > robot.urdf
+  or let the launch file do it with:
+      Command(['xacro ', path])
+
+  Macros live in robot_parts.xacro (included below), so the arm and leg
+  definitions exist exactly once.
+-->
+<robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ========================== properties =========================== -->
+  <!-- torso -->
+  <xacro:property name="torso_x" value="0.4"/>
+  <xacro:property name="torso_y" value="0.3"/>
+  <xacro:property name="torso_z" value="0.6"/>
+  <xacro:property name="torso_z_offset" value="0.8"/>
+  <xacro:property name="torso_mass" value="8.0"/>
+
+  <!-- neck / head / camera -->
+  <xacro:property name="neck_radius" value="0.04"/>
+  <xacro:property name="neck_length" value="0.08"/>
+  <xacro:property name="neck_z" value="1.1"/>
+  <xacro:property name="neck_mass" value="0.2"/>
+
+  <xacro:property name="head_radius" value="0.1"/>
+  <xacro:property name="head_mass" value="1.0"/>
+
+  <xacro:property name="camera_x" value="0.04"/>
+  <xacro:property name="camera_y" value="0.06"/>
+  <xacro:property name="camera_z" value="0.04"/>
+  <xacro:property name="camera_mass" value="0.1"/>
+  <xacro:property name="camera_x_offset" value="0.12"/>
+  <xacro:property name="camera_z_offset" value="0.1"/>
+
+  <!-- arms -->
+  <xacro:property name="shoulder_y" value="0.20"/>
+  <xacro:property name="shoulder_z" value="1.0"/>
+  <xacro:property name="arm_len" value="0.25"/>
+  <xacro:property name="arm_w" value="0.06"/>
+  <xacro:property name="upper_arm_mass" value="0.8"/>
+  <xacro:property name="lower_arm_mass" value="0.5"/>
+  <xacro:property name="gripper_len" value="0.08"/>
+  <xacro:property name="gripper_w" value="0.1"/>
+  <xacro:property name="gripper_h" value="0.06"/>
+  <xacro:property name="gripper_mass" value="0.2"/>
+
+  <!-- legs -->
+  <xacro:property name="hip_y" value="0.12"/>
+  <xacro:property name="hip_z" value="0.56"/>
+  <xacro:property name="leg_len" value="0.25"/>
+  <xacro:property name="leg_w" value="0.08"/>
+  <xacro:property name="upper_leg_mass" value="1.0"/>
+  <xacro:property name="lower_leg_mass" value="0.6"/>
+  <xacro:property name="foot_x" value="0.06"/>
+  <xacro:property name="foot_y" value="0.1"/>
+  <xacro:property name="foot_z" value="0.18"/>
+  <xacro:property name="foot_z_offset" value="0.05"/>
+  <xacro:property name="foot_mass" value="0.3"/>
+
+  <!-- =========================== materials =========================== -->
+  <material name="blue">   <color rgba="0.10 0.30 0.80 1.0"/> </material>
+  <material name="grey">   <color rgba="0.60 0.60 0.60 1.0"/> </material>
+  <material name="orange"> <color rgba="1.00 0.50 0.00 1.0"/> </material>
+  <material name="red">    <color rgba="0.90 0.10 0.10 1.0"/> </material>
+  <material name="glass">  <color rgba="0.00 0.80 1.00 0.5"/> </material>
+
+  <!-- macros: box/cylinder/sphere inertia, gripper, arm, leg -->
+  <xacro:include filename="$(find my_robot)/urdf/robot_parts.xacro"/>
+
+  <!-- ===================== links that exist once ===================== -->
+  <link name="base_link">
+    <visual>
+      <geometry> <box size="${torso_x} ${torso_y} ${torso_z}"/> </geometry>
+      <origin xyz="0 0 ${torso_z_offset}" rpy="0 0 0"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry> <box size="${torso_x} ${torso_y} ${torso_z}"/> </geometry>
+      <origin xyz="0 0 ${torso_z_offset}" rpy="0 0 0"/>
+    </collision>
+    <xacro:box_inertia mass="${torso_mass}"
+                       x="${torso_x}" y="${torso_y}" z="${torso_z}"
+                       ox="0" oy="0" oz="${torso_z_offset}"/>
+  </link>
+
+  <link name="neck">
+    <visual>
+      <geometry> <cylinder radius="${neck_radius}" length="${neck_length}"/> </geometry>
+      <origin xyz="0 0 ${neck_length / 2}" rpy="0 0 0"/>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry> <cylinder radius="${neck_radius}" length="${neck_length}"/> </geometry>
+      <origin xyz="0 0 ${neck_length / 2}" rpy="0 0 0"/>
+    </collision>
+    <xacro:cylinder_inertia mass="${neck_mass}"
+                            radius="${neck_radius}" length="${neck_length}"
+                            ox="0" oy="0" oz="${neck_length / 2}"/>
+  </link>
+
+  <link name="head">
+    <visual>
+      <geometry> <sphere radius="${head_radius}"/> </geometry>
+      <origin xyz="0 0 ${head_radius}" rpy="0 0 0"/>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry> <sphere radius="${head_radius}"/> </geometry>
+      <origin xyz="0 0 ${head_radius}" rpy="0 0 0"/>
+    </collision>
+    <xacro:sphere_inertia mass="${head_mass}" radius="${head_radius}"
+                          ox="0" oy="0" oz="${head_radius}"/>
+  </link>
+
+  <link name="camera">
+    <visual>
+      <geometry> <box size="${camera_x} ${camera_y} ${camera_z}"/> </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="glass"/>
+    </visual>
+    <collision>
+      <geometry> <box size="${camera_x} ${camera_y} ${camera_z}"/> </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+    <xacro:box_inertia mass="${camera_mass}"
+                       x="${camera_x}" y="${camera_y}" z="${camera_z}"
+                       ox="0" oy="0" oz="0"/>
+  </link>
+
+  <joint name="base_to_neck" type="fixed">
+    <parent link="base_link"/>
+    <child  link="neck"/>
+    <origin xyz="0 0 ${neck_z}" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="neck_to_head" type="revolute">
+    <parent link="neck"/>
+    <child  link="head"/>
+    <origin xyz="0 0 ${neck_length}" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.0" upper="1.0" effort="5.0" velocity="1.0"/>
+    <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+
+  <joint name="head_to_camera" type="fixed">
+    <parent link="head"/>
+    <child  link="camera"/>
+    <origin xyz="${camera_x_offset} 0 ${camera_z_offset}" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ===================== instantiate the macros =================== -->
+  <!-- side = +1 / -1 flips the Y offset: one macro, both sides -->
+  <xacro:arm prefix="left"  side="1"/>
+  <xacro:arm prefix="right" side="-1"/>
+  <xacro:leg prefix="left"  side="1"/>
+  <xacro:leg prefix="right" side="-1"/>
+
+</robot>

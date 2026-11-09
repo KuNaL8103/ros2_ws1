@@ -1,0 +1,63 @@
+[0.021s] Invoking command in '/home/kunal/ros2_ws1/build/my_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/kunal/ros2_ws1/src/my_package -DCMAKE_INSTALL_PREFIX=/home/kunal/ros2_ws1/install/my_package
+[0.508s] -- The C compiler identification is GNU 13.3.0
+[1.606s] -- The CXX compiler identification is GNU 13.3.0
+[2.756s] -- Detecting C compiler ABI info
+[3.472s] -- Detecting C compiler ABI info - done
+[3.481s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.482s] -- Detecting C compile features
+[3.483s] -- Detecting C compile features - done
+[3.832s] -- Detecting CXX compiler ABI info
+[4.512s] -- Detecting CXX compiler ABI info - done
+[4.519s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.519s] -- Detecting CXX compile features
+[4.520s] -- Detecting CXX compile features - done
+[4.539s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[4.739s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.910s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[5.162s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[5.188s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[5.220s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.255s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.390s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[5.397s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[5.542s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[5.814s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[5.960s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[6.273s] -- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+[6.299s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[6.447s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[6.447s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/kunal/ros2_ws1/src/my_package/include>
+[6.447s] -- Configured cppcheck exclude dirs and/or files: 
+[6.451s] -- Added test 'lint_cmake' to check CMake code style
+[6.456s] -- Added test 'uncrustify' to check C / C++ code style
+[6.456s] -- Configured uncrustify additional arguments: 
+[6.460s] -- Added test 'xmllint' to check XML markup files
+[6.468s] -- Configuring done (6.4s)
+[6.499s] -- Generating done (0.0s)
+[6.512s] -- Build files have been written to: /home/kunal/ros2_ws1/build/my_package
+[6.525s] Invoked command in '/home/kunal/ros2_ws1/build/my_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/kunal/ros2_ws1/src/my_package -DCMAKE_INSTALL_PREFIX=/home/kunal/ros2_ws1/install/my_package
+[6.527s] Invoking command in '/home/kunal/ros2_ws1/build/my_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/my_package -- -j8 -l8
+[6.590s] [ 50%] [32mBuilding CXX object CMakeFiles/my_node.dir/src/my_node.cpp.o[0m
+[6.658s] [100%] [32m[1mLinking CXX executable my_node[0m
+[7.113s] [100%] Built target my_node
+[7.127s] Invoked command in '/home/kunal/ros2_ws1/build/my_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/my_package -- -j8 -l8
+[7.142s] Invoking command in '/home/kunal/ros2_ws1/build/my_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/my_package
+[7.154s] -- Install configuration: ""
+[7.155s] -- Installing: /home/kunal/ros2_ws1/install/my_package/lib/my_package/my_node
+[7.156s] -- Set non-toolchain portion of runtime path of "/home/kunal/ros2_ws1/install/my_package/lib/my_package/my_node" to ""
+[7.158s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/ament_index/resource_index/package_run_dependencies/my_package
+[7.159s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/ament_index/resource_index/parent_prefix_path/my_package
+[7.160s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/my_package/environment/ament_prefix_path.sh
+[7.160s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/my_package/environment/ament_prefix_path.dsv
+[7.160s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/my_package/environment/path.sh
+[7.160s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/my_package/environment/path.dsv
+[7.160s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/my_package/local_setup.bash
+[7.161s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/my_package/local_setup.sh
+[7.161s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/my_package/local_setup.zsh
+[7.162s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/my_package/local_setup.dsv
+[7.162s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/my_package/package.dsv
+[7.162s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/ament_index/resource_index/packages/my_package
+[7.163s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/my_package/cmake/my_packageConfig.cmake
+[7.163s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/my_package/cmake/my_packageConfig-version.cmake
+[7.164s] -- Installing: /home/kunal/ros2_ws1/install/my_package/share/my_package/package.xml
+[7.167s] Invoked command in '/home/kunal/ros2_ws1/build/my_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/my_package

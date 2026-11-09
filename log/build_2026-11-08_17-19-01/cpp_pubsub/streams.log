@@ -1,0 +1,68 @@
+[0.015s] Invoking command in '/home/kunal/ros2_ws1/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/kunal/ros2_ws1/src/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/home/kunal/ros2_ws1/install/cpp_pubsub
+[0.398s] -- The C compiler identification is GNU 13.3.0
+[1.524s] -- The CXX compiler identification is GNU 13.3.0
+[2.792s] -- Detecting C compiler ABI info
+[3.744s] -- Detecting C compiler ABI info - done
+[3.766s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.766s] -- Detecting C compile features
+[3.767s] -- Detecting C compile features - done
+[4.433s] -- Detecting CXX compiler ABI info
+[5.346s] -- Detecting CXX compiler ABI info - done
+[5.357s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.357s] -- Detecting CXX compile features
+[5.358s] -- Detecting CXX compile features - done
+[5.365s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[5.552s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[5.703s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[5.933s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[5.956s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[5.977s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.002s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.118s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[6.123s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[6.253s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[6.612s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[6.848s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[7.229s] -- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+[7.249s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[7.413s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.414s] -- Configured cppcheck include dirs: 
+[7.414s] -- Configured cppcheck exclude dirs and/or files: 
+[7.415s] -- Added test 'lint_cmake' to check CMake code style
+[7.417s] -- Added test 'uncrustify' to check C / C++ code style
+[7.417s] -- Configured uncrustify additional arguments: 
+[7.419s] -- Added test 'xmllint' to check XML markup files
+[7.422s] -- Configuring done (7.4s)
+[7.453s] -- Generating done (0.0s)
+[7.461s] -- Build files have been written to: /home/kunal/ros2_ws1/build/cpp_pubsub
+[7.481s] Invoked command in '/home/kunal/ros2_ws1/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/kunal/ros2_ws1/src/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/home/kunal/ros2_ws1/install/cpp_pubsub
+[7.484s] Invoking command in '/home/kunal/ros2_ws1/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/cpp_pubsub -- -j8 -l8
+[7.579s] [ 50%] Building CXX object CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o
+[7.579s] [ 50%] Building CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o
+[14.598s] [ 75%] Linking CXX executable talker
+[15.180s] [ 75%] Built target talker
+[18.318s] [100%] Linking CXX executable listener
+[18.955s] [100%] Built target listener
+[18.969s] Invoked command in '/home/kunal/ros2_ws1/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/cpp_pubsub -- -j8 -l8
+[18.983s] Invoking command in '/home/kunal/ros2_ws1/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/cpp_pubsub
+[18.995s] -- Install configuration: ""
+[18.996s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/lib/cpp_pubsub/talker
+[18.998s] -- Set non-toolchain portion of runtime path of "/home/kunal/ros2_ws1/install/cpp_pubsub/lib/cpp_pubsub/talker" to ""
+[18.999s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/lib/cpp_pubsub/listener
+[19.004s] -- Set non-toolchain portion of runtime path of "/home/kunal/ros2_ws1/install/cpp_pubsub/lib/cpp_pubsub/listener" to ""
+[19.006s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub
+[19.006s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub
+[19.008s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh
+[19.008s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv
+[19.008s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh
+[19.008s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv
+[19.009s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash
+[19.009s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh
+[19.010s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh
+[19.010s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv
+[19.010s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/package.dsv
+[19.010s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub
+[19.011s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake
+[19.011s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake
+[19.011s] -- Installing: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/package.xml
+[19.014s] Invoked command in '/home/kunal/ros2_ws1/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/cpp_pubsub

@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: py_pubsub
+Version: 0.0.0
+Summary: pub/sub demo
+Maintainer: kunal
+Maintainer-email: kunaldabbe2003@gmail.com
+License: Apache-2.0
+Requires-Dist: setuptools
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: summary

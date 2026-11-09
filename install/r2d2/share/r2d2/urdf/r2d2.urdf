@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<!--
+  R2D2, deliberately simple: 7 links, 6 joints.
+  Four joints are animated by the r2d2 state_publisher:
+      l1_connect, l2_connect (leg swing)
+      tilt                   (head nod)
+      periscope              (rod spin)
+  body_connect and box_connect are fixed.
+
+  axis is the root link and intentionally has no <inertial>, which also
+  avoids the KDL "root link has an inertia" warning.
+-->
+<robot name="r2d2">
+
+  <material name="blue">  <color rgba="0.10 0.25 0.80 1.0"/> </material>
+  <material name="white"> <color rgba="0.90 0.90 0.90 1.0"/> </material>
+  <material name="grey">  <color rgba="0.45 0.45 0.45 1.0"/> </material>
+  <material name="dark">  <color rgba="0.15 0.15 0.15 1.0"/> </material>
+  <material name="red">   <color rgba="0.90 0.10 0.10 1.0"/> </material>
+
+  <!-- ============================== links ============================ -->
+  <!-- central spine, hides inside the body -->
+  <link name="axis">
+    <visual>
+      <geometry> <cylinder radius="0.12" length="0.9"/> </geometry>
+      <origin xyz="0 0 0.45" rpy="0 0 0"/>
+      <material name="dark"/>
+    </visual>
+    <collision>
+      <geometry> <cylinder radius="0.12" length="0.9"/> </geometry>
+      <origin xyz="0 0 0.45" rpy="0 0 0"/>
+    </collision>
+  </link>
+
+  <!-- side legs, pivoting at the hip -->
+  <link name="leg1">
+    <visual>
+      <geometry> <box size="0.15 0.12 0.55"/> </geometry>
+      <origin xyz="0 0 -0.275" rpy="0 0 0"/>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <geometry> <box size="0.15 0.12 0.55"/> </geometry>
+      <origin xyz="0 0 -0.275" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <origin xyz="0 0 -0.275" rpy="0 0 0"/>
+      <inertia ixx="0.026408" ixy="0.0" ixz="0.0"
+               iyy="0.027083" iyz="0.0"
+               izz="0.003075"/>
+    </inertial>
+  </link>
+
+  <link name="leg2">
+    <visual>
+      <geometry> <box size="0.15 0.12 0.55"/> </geometry>
+      <origin xyz="0 0 -0.275" rpy="0 0 0"/>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <geometry> <box size="0.15 0.12 0.55"/> </geometry>
+      <origin xyz="0 0 -0.275" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <origin xyz="0 0 -0.275" rpy="0 0 0"/>
+      <inertia ixx="0.026408" ixy="0.0" ixz="0.0"
+               iyy="0.027083" iyz="0.0"
+               izz="0.003075"/>
+    </inertial>
+  </link>
+
+  <!-- main body -->
+  <link name="body">
+    <visual>
+      <geometry> <cylinder radius="0.28" length="0.7"/> </geometry>
+      <origin xyz="0 0 0.35" rpy="0 0 0"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry> <cylinder radius="0.28" length="0.7"/> </geometry>
+      <origin xyz="0 0 0.35" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="5.0"/>
+      <origin xyz="0 0 0.35" rpy="0 0 0"/>
+      <inertia ixx="0.302167" ixy="0.0" ixz="0.0"
+               iyy="0.302167" iyz="0.0"
+               izz="0.196000"/>
+    </inertial>
+  </link>
+
+  <!-- dome -->
+  <link name="head">
+    <visual>
+      <geometry> <sphere radius="0.25"/> </geometry>
+      <origin xyz="0 0 0.25" rpy="0 0 0"/>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <geometry> <sphere radius="0.25"/> </geometry>
+      <origin xyz="0 0 0.25" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="2.0"/>
+      <origin xyz="0 0 0.25" rpy="0 0 0"/>
+      <inertia ixx="0.050000" ixy="0.0" ixz="0.0"
+               iyy="0.050000" iyz="0.0"
+               izz="0.050000"/>
+    </inertial>
+  </link>
+
+  <!-- periscope rod -->
+  <link name="rod">
+    <visual>
+      <geometry> <cylinder radius="0.03" length="0.25"/> </geometry>
+      <origin xyz="0 0 0.125" rpy="0 0 0"/>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry> <cylinder radius="0.03" length="0.25"/> </geometry>
+      <origin xyz="0 0 0.125" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin xyz="0 0 0.125" rpy="0 0 0"/>
+      <inertia ixx="0.001087" ixy="0.0" ixz="0.0"
+               iyy="0.001087" iyz="0.0"
+               izz="0.000090"/>
+    </inertial>
+  </link>
+
+  <!-- small box on the side of the dome -->
+  <link name="box">
+    <visual>
+      <geometry> <box size="0.08 0.08 0.08"/> </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <geometry> <box size="0.08 0.08 0.08"/> </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.000213" ixy="0.0" ixz="0.0"
+               iyy="0.000213" iyz="0.0"
+               izz="0.000213"/>
+    </inertial>
+  </link>
+
+  <!-- ============================== joints =========================== -->
+  <!-- legs swing forwards/backwards about Y -->
+  <joint name="l1_connect" type="continuous">
+    <parent link="axis"/>
+    <child  link="leg1"/>
+    <origin xyz="0 0.34 0.55" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+
+  <joint name="l2_connect" type="continuous">
+    <parent link="axis"/>
+    <child  link="leg2"/>
+    <origin xyz="0 -0.34 0.55" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+
+  <!-- body sits on the spine -->
+  <joint name="body_connect" type="fixed">
+    <parent link="axis"/>
+    <child  link="body"/>
+    <origin xyz="0 0 0.4" rpy="0 0 0"/>
+  </joint>
+
+  <!-- head nods about X -->
+  <joint name="tilt" type="revolute">
+    <parent link="body"/>
+    <child  link="head"/>
+    <origin xyz="0 0 0.7" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-1.0" upper="1.0" effort="30.0" velocity="1.0"/>
+    <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+
+  <!-- rod spins about Z -->
+  <joint name="periscope" type="continuous">
+    <parent link="head"/>
+    <child  link="rod"/>
+    <origin xyz="0 0 0.5" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+
+  <joint name="box_connect" type="fixed">
+    <parent link="head"/>
+    <child  link="box"/>
+    <origin xyz="0 -0.24 0.25" rpy="0 0 0"/>
+  </joint>
+
+</robot>

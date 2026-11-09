@@ -1,0 +1,26 @@
+[0.041s] Invoking command in '/home/kunal/ros2_ws1/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/cpp_pubsub -- -j8 -l8
+[0.375s] [100%] Built target listener
+[0.376s] [100%] Built target talker
+[0.630s] Invoked command in '/home/kunal/ros2_ws1/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/cpp_pubsub -- -j8 -l8
+[0.645s] Invoking command in '/home/kunal/ros2_ws1/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/cpp_pubsub
+[0.659s] -- Install configuration: ""
+[0.661s] -- Execute custom install script
+[0.663s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/lib/cpp_pubsub/talker
+[0.664s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/lib/cpp_pubsub/listener
+[0.669s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/launch/pubsub.launch.py
+[0.669s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub
+[0.670s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub
+[0.670s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh
+[0.670s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv
+[0.670s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh
+[0.671s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv
+[0.671s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash
+[0.671s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh
+[0.671s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh
+[0.672s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv
+[0.672s] -- Symlinking: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/package.dsv
+[0.683s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub
+[0.683s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake
+[0.683s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake
+[0.684s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cpp_pubsub/share/cpp_pubsub/package.xml
+[0.713s] Invoked command in '/home/kunal/ros2_ws1/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/cpp_pubsub

@@ -1,0 +1,2 @@
+[console_scripts]
+state_publisher = r2d2.state_publisher:main

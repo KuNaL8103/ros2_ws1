@@ -1,0 +1,195 @@
+<!--
+  Reusable xacro macros. This file contains NO links: the main file
+  includes it and instantiates the macros.
+
+  Inertias are computed from the same properties as the geometry, so
+  changing a dimension automatically updates the inertia too.
+-->
+
+<robot name="robot_parts" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<!-- solid box: Ixx = m(y^2 + z^2)/12, etc. -->
+<xacro:macro name="box_inertia" params="mass x y z ox oy oz">
+  <inertial>
+    <mass value="${mass}"/>
+    <origin xyz="${ox} ${oy} ${oz}" rpy="0 0 0"/>
+    <inertia ixx="${mass * (y*y + z*z) / 12}" ixy="0.0" ixz="0.0"
+             iyy="${mass * (x*x + z*z) / 12}" iyz="0.0"
+             izz="${mass * (x*x + y*y) / 12}"/>
+  </inertial>
+</xacro:macro>
+
+<!-- solid cylinder: Ixx = Iyy = m(3r^2 + h^2)/12, Izz = m r^2 / 2 -->
+<xacro:macro name="cylinder_inertia" params="mass radius length ox oy oz">
+  <inertial>
+    <mass value="${mass}"/>
+    <origin xyz="${ox} ${oy} ${oz}" rpy="0 0 0"/>
+    <inertia ixx="${mass * (3*radius*radius + length*length) / 12}" ixy="0.0" ixz="0.0"
+             iyy="${mass * (3*radius*radius + length*length) / 12}" iyz="0.0"
+             izz="${mass * radius * radius / 2}"/>
+  </inertial>
+</xacro:macro>
+
+<!-- solid sphere: I = 2 m r^2 / 5 -->
+<xacro:macro name="sphere_inertia" params="mass radius ox oy oz">
+  <inertial>
+    <mass value="${mass}"/>
+    <origin xyz="${ox} ${oy} ${oz}" rpy="0 0 0"/>
+    <inertia ixx="${2 * mass * radius * radius / 5}" ixy="0.0" ixz="0.0"
+             iyy="${2 * mass * radius * radius / 5}" iyz="0.0"
+             izz="${2 * mass * radius * radius / 5}"/>
+  </inertial>
+</xacro:macro>
+
+<!-- gripper: the only mesh in the robot -->
+<xacro:macro name="gripper" params="prefix">
+  <link name="${prefix}_gripper">
+    <visual>
+      <geometry>
+        <mesh filename="package://my_robot/meshes/gripper.stl" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="${gripper_len / 2} 0 0" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <geometry> <box size="${gripper_len} ${gripper_w} ${gripper_h}"/> </geometry>
+      <origin xyz="${gripper_len / 2} 0 0" rpy="0 0 0"/>
+    </collision>
+    <xacro:box_inertia mass="${gripper_mass}"
+                       x="${gripper_len}" y="${gripper_w}" z="${gripper_h}"
+                       ox="${gripper_len / 2}" oy="0" oz="0"/>
+  </link>
+</xacro:macro>
+
+<!-- one complete arm: upper, lower, gripper + 3 joints.
+     side = +1 for left, -1 for right (the Y mirror trick). -->
+<xacro:macro name="arm" params="prefix side">
+  <link name="${prefix}_upper_arm">
+    <visual>
+      <geometry> <box size="${arm_len} ${arm_w} ${arm_w}"/> </geometry>
+      <origin xyz="${arm_len / 2} 0 0" rpy="0 0 0"/>
+      <material name="orange"/>
+    </visual>
+    <collision>
+      <geometry> <box size="${arm_len} ${arm_w} ${arm_w}"/> </geometry>
+      <origin xyz="${arm_len / 2} 0 0" rpy="0 0 0"/>
+    </collision>
+    <xacro:box_inertia mass="${upper_arm_mass}"
+                       x="${arm_len}" y="${arm_w}" z="${arm_w}"
+                       ox="${arm_len / 2}" oy="0" oz="0"/>
+  </link>
+
+  <link name="${prefix}_lower_arm">
+    <visual>
+      <geometry> <box size="${arm_len} ${arm_w} ${arm_w}"/> </geometry>
+      <origin xyz="${arm_len / 2} 0 0" rpy="0 0 0"/>
+      <material name="orange"/>
+    </visual>
+    <collision>
+      <geometry> <box size="${arm_len} ${arm_w} ${arm_w}"/> </geometry>
+      <origin xyz="${arm_len / 2} 0 0" rpy="0 0 0"/>
+    </collision>
+    <xacro:box_inertia mass="${lower_arm_mass}"
+                       x="${arm_len}" y="${arm_w}" z="${arm_w}"
+                       ox="${arm_len / 2}" oy="0" oz="0"/>
+  </link>
+
+  <xacro:gripper prefix="${prefix}"/>
+
+  <joint name="base_to_${prefix}_upper_arm" type="continuous">
+    <parent link="base_link"/>
+    <child  link="${prefix}_upper_arm"/>
+    <origin xyz="0 ${side * shoulder_y} ${shoulder_z}" rpy="0 1.5708 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+
+  <joint name="${prefix}_elbow" type="revolute">
+    <parent link="${prefix}_upper_arm"/>
+    <child  link="${prefix}_lower_arm"/>
+    <origin xyz="${arm_len} 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.5708" upper="1.5708" effort="10.0" velocity="1.0"/>
+    <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+
+  <joint name="${prefix}_wrist" type="fixed">
+    <parent link="${prefix}_lower_arm"/>
+    <child  link="${prefix}_gripper"/>
+    <origin xyz="${arm_len} 0 0" rpy="0 0 0"/>
+  </joint>
+</xacro:macro>
+
+<!-- one complete leg: upper, lower, foot + 3 joints -->
+<xacro:macro name="leg" params="prefix side">
+  <link name="${prefix}_upper_leg">
+    <visual>
+      <geometry> <box size="${leg_len} ${leg_w} ${leg_w}"/> </geometry>
+      <origin xyz="${leg_len / 2} 0 0" rpy="0 0 0"/>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry> <box size="${leg_len} ${leg_w} ${leg_w}"/> </geometry>
+      <origin xyz="${leg_len / 2} 0 0" rpy="0 0 0"/>
+    </collision>
+    <xacro:box_inertia mass="${upper_leg_mass}"
+                       x="${leg_len}" y="${leg_w}" z="${leg_w}"
+                       ox="${leg_len / 2}" oy="0" oz="0"/>
+  </link>
+
+  <link name="${prefix}_lower_leg">
+    <visual>
+      <geometry> <box size="${leg_len} ${leg_w} ${leg_w}"/> </geometry>
+      <origin xyz="${leg_len / 2} 0 0" rpy="0 0 0"/>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry> <box size="${leg_len} ${leg_w} ${leg_w}"/> </geometry>
+      <origin xyz="${leg_len / 2} 0 0" rpy="0 0 0"/>
+    </collision>
+    <xacro:box_inertia mass="${lower_leg_mass}"
+                       x="${leg_len}" y="${leg_w}" z="${leg_w}"
+                       ox="${leg_len / 2}" oy="0" oz="0"/>
+  </link>
+
+  <link name="${prefix}_foot">
+    <visual>
+      <geometry> <box size="${foot_x} ${foot_y} ${foot_z}"/> </geometry>
+      <origin xyz="${foot_x / 2} 0 ${foot_z_offset}" rpy="0 0 0"/>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry> <box size="${foot_x} ${foot_y} ${foot_z}"/> </geometry>
+      <origin xyz="${foot_x / 2} 0 ${foot_z_offset}" rpy="0 0 0"/>
+    </collision>
+    <xacro:box_inertia mass="${foot_mass}"
+                       x="${foot_x}" y="${foot_y}" z="${foot_z}"
+                       ox="${foot_x / 2}" oy="0" oz="${foot_z_offset}"/>
+  </link>
+
+  <joint name="base_to_${prefix}_upper_leg" type="continuous">
+    <parent link="base_link"/>
+    <child  link="${prefix}_upper_leg"/>
+    <origin xyz="0 ${side * hip_y} ${hip_z}" rpy="0 1.5708 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.5708" upper="1.5708" effort="10.0" velocity="1.0"/>
+    <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+
+  <joint name="${prefix}_knee" type="revolute">
+    <parent link="${prefix}_upper_leg"/>
+    <child  link="${prefix}_lower_leg"/>
+    <origin xyz="${leg_len} 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.5708" upper="1.5708" effort="10.0" velocity="1.0"/>
+    <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+
+  <joint name="${prefix}_ankle" type="fixed">
+    <parent link="${prefix}_lower_leg"/>
+    <child  link="${prefix}_foot"/>
+    <origin xyz="${leg_len} 0 0" rpy="0 0 0"/>
+  </joint>
+</xacro:macro>
+
+</robot>
