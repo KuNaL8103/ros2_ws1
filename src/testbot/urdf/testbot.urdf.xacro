@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<!--
+  Tesla-bot style upper body.
+
+  Kinematic chain (per the lesson):
+      world -> head -> body -> shoulder -> upper_arm -> lower_arm -> hand
+
+  world_to_head and head_to_body are fixed. Shoulders and elbows rotate
+  about Z, so the arms swing in the XY plane like clock hands.
+  At zero the hand is 0.3 + 0.3 = 0.6 m from the shoulder.
+-->
+<robot name="testbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ========================== properties =========================== -->
+  <xacro:property name="head_z" value="1.2"/>
+  <xacro:property name="head_radius" value="0.15"/>
+  <xacro:property name="head_mass" value="2.0"/>
+
+  <xacro:property name="body_x" value="0.5"/>
+  <xacro:property name="body_y" value="0.4"/>
+  <xacro:property name="body_z" value="1.05"/>
+  <xacro:property name="body_mass" value="10.0"/>
+
+  <xacro:property name="shoulder_x" value="0.28"/>
+  <xacro:property name="shoulder_z" value="-0.1"/>
+  <xacro:property name="arm_len" value="0.3"/>
+  <xacro:property name="arm_w" value="0.08"/>
+  <xacro:property name="upper_arm_mass" value="0.8"/>
+  <xacro:property name="lower_arm_mass" value="0.5"/>
+  <xacro:property name="hand_radius" value="0.06"/>
+  <xacro:property name="hand_mass" value="0.2"/>
+
+  <material name="white"> <color rgba="0.90 0.90 0.90 1.0"/> </material>
+  <material name="grey">  <color rgba="0.45 0.45 0.45 1.0"/> </material>
+  <material name="blue">  <color rgba="0.10 0.25 0.80 1.0"/> </material>
+  <material name="red">   <color rgba="0.90 0.10 0.10 1.0"/> </material>
+
+  <!-- ============================ links ============================= -->
+  <!-- Gazebo treats a root link named "world" as the fixed world frame -->
+  <link name="world"/>
+
+  <link name="head">
+    <visual>
+      <geometry> <sphere radius="${head_radius}"/> </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry> <sphere radius="${head_radius}"/> </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="${head_mass}"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="${2 * head_mass * head_radius * head_radius / 5}"
+               ixy="0.0" ixz="0.0"
+               iyy="${2 * head_mass * head_radius * head_radius / 5}"
+               iyz="0.0"
+               izz="${2 * head_mass * head_radius * head_radius / 5}"/>
+    </inertial>
+  </link>
+
+  <!-- body frame at the top of the torso; the box reaches down to z = 0 -->
+  <link name="body">
+    <visual>
+      <geometry> <box size="${body_x} ${body_y} ${body_z}"/> </geometry>
+      <origin xyz="0 0 ${-body_z / 2}" rpy="0 0 0"/>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <geometry> <box size="${body_x} ${body_y} ${body_z}"/> </geometry>
+      <origin xyz="0 0 ${-body_z / 2}" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="${body_mass}"/>
+      <origin xyz="0 0 ${-body_z / 2}" rpy="0 0 0"/>
+      <inertia ixx="${body_mass * (body_y*body_y + body_z*body_z) / 12}"
+               ixy="0.0" ixz="0.0"
+               iyy="${body_mass * (body_x*body_x + body_z*body_z) / 12}"
+               iyz="0.0"
+               izz="${body_mass * (body_x*body_x + body_y*body_y) / 12}"/>
+    </inertial>
+  </link>
+
+  <!-- one macro produces both mirrored arms;
+       side = +1 -> right (+X), side = -1 -> left (-X) -->
+  <xacro:macro name="arm" params="prefix side">
+    <link name="upper_arm_${prefix}">
+      <visual>
+        <geometry> <box size="${arm_len} ${arm_w} ${arm_w}"/> </geometry>
+        <origin xyz="${side * arm_len / 2} 0 0" rpy="0 0 0"/>
+        <material name="grey"/>
+      </visual>
+      <collision>
+        <geometry> <box size="${arm_len} ${arm_w} ${arm_w}"/> </geometry>
+        <origin xyz="${side * arm_len / 2} 0 0" rpy="0 0 0"/>
+      </collision>
+      <inertial>
+        <mass value="${upper_arm_mass}"/>
+        <origin xyz="${side * arm_len / 2} 0 0" rpy="0 0 0"/>
+        <inertia ixx="${upper_arm_mass * (arm_w*arm_w + arm_w*arm_w) / 12}"
+                 ixy="0.0" ixz="0.0"
+                 iyy="${upper_arm_mass * (arm_len*arm_len + arm_w*arm_w) / 12}"
+                 iyz="0.0"
+                 izz="${upper_arm_mass * (arm_len*arm_len + arm_w*arm_w) / 12}"/>
+      </inertial>
+    </link>
+
+    <link name="lower_arm_${prefix}">
+      <visual>
+        <geometry> <box size="${arm_len} ${arm_w} ${arm_w}"/> </geometry>
+        <origin xyz="${side * arm_len / 2} 0 0" rpy="0 0 0"/>
+        <material name="grey"/>
+      </visual>
+      <collision>
+        <geometry> <box size="${arm_len} ${arm_w} ${arm_w}"/> </geometry>
+        <origin xyz="${side * arm_len / 2} 0 0" rpy="0 0 0"/>
+      </collision>
+      <inertial>
+        <mass value="${lower_arm_mass}"/>
+        <origin xyz="${side * arm_len / 2} 0 0" rpy="0 0 0"/>
+        <inertia ixx="${lower_arm_mass * (arm_w*arm_w + arm_w*arm_w) / 12}"
+                 ixy="0.0" ixz="0.0"
+                 iyy="${lower_arm_mass * (arm_len*arm_len + arm_w*arm_w) / 12}"
+                 iyz="0.0"
+                 izz="${lower_arm_mass * (arm_len*arm_len + arm_w*arm_w) / 12}"/>
+      </inertial>
+    </link>
+
+    <link name="hand_${prefix}">
+      <visual>
+        <geometry> <sphere radius="${hand_radius}"/> </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <material name="red"/>
+      </visual>
+      <collision>
+        <geometry> <sphere radius="${hand_radius}"/> </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+      </collision>
+      <inertial>
+        <mass value="${hand_mass}"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="${2 * hand_mass * hand_radius * hand_radius / 5}"
+                 ixy="0.0" ixz="0.0"
+                 iyy="${2 * hand_mass * hand_radius * hand_radius / 5}"
+                 iyz="0.0"
+                 izz="${2 * hand_mass * hand_radius * hand_radius / 5}"/>
+      </inertial>
+    </link>
+
+    <!-- shoulder: revolute about Z -->
+    <joint name="body_to_upper_arm_${prefix}" type="revolute">
+      <parent link="body"/>
+      <child  link="upper_arm_${prefix}"/>
+      <origin xyz="${side * shoulder_x} 0 ${shoulder_z}" rpy="0 0 0"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="-1.5708" upper="1.5708" effort="30.0" velocity="2.0"/>
+      <dynamics damping="0.5" friction="0.05"/>
+    </joint>
+
+    <!-- elbow: the joint the trajectory controller drives -->
+    <joint name="upper_arm_to_lower_arm_${prefix}" type="revolute">
+      <parent link="upper_arm_${prefix}"/>
+      <child  link="lower_arm_${prefix}"/>
+      <origin xyz="${side * arm_len} 0 0" rpy="0 0 0"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="-1.5708" upper="1.5708" effort="30.0" velocity="2.0"/>
+      <dynamics damping="0.1" friction="0.05"/>
+    </joint>
+
+    <joint name="lower_arm_to_hand_${prefix}" type="fixed">
+      <parent link="lower_arm_${prefix}"/>
+      <child  link="hand_${prefix}"/>
+      <origin xyz="${side * arm_len} 0 0" rpy="0 0 0"/>
+    </joint>
+  </xacro:macro>
+
+  <xacro:arm prefix="right" side="1"/>
+  <xacro:arm prefix="left"  side="-1"/>
+
+  <!-- =========================== joints ============================= -->
+  <joint name="world_to_head" type="fixed">
+    <parent link="world"/>
+    <child  link="head"/>
+    <origin xyz="0 0 ${head_z}" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="head_to_body" type="fixed">
+    <parent link="head"/>
+    <child  link="body"/>
+    <origin xyz="0 0 ${-head_radius - 0.0}" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ====================== ros2_control ============================ -->
+  <ros2_control name="GazeboSimSystem" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+
+    <!-- elbows: position command + full state feedback -->
+    <joint name="upper_arm_to_lower_arm_right">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="upper_arm_to_lower_arm_left">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <!-- passive shoulders: state only, so joint_state_broadcaster
+         reports them and robot_state_publisher can build their TF -->
+    <joint name="body_to_upper_arm_right">
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="body_to_upper_arm_left">
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+  </ros2_control>
+
+  <!-- ====================== Gazebo plugin =========================== -->
+  <gazebo>
+    <plugin filename="gz_ros2_control-system"
+            name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>$(find testbot)/config/controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+</robot>

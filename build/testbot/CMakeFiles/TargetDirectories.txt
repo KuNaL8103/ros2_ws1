@@ -1,0 +1,10 @@
+/home/kunal/ros2_ws1/build/testbot/CMakeFiles/uninstall.dir
+/home/kunal/ros2_ws1/build/testbot/CMakeFiles/testbot_uninstall.dir
+/home/kunal/ros2_ws1/build/testbot/CMakeFiles/joint_publisher.dir
+/home/kunal/ros2_ws1/build/testbot/CMakeFiles/test.dir
+/home/kunal/ros2_ws1/build/testbot/CMakeFiles/edit_cache.dir
+/home/kunal/ros2_ws1/build/testbot/CMakeFiles/rebuild_cache.dir
+/home/kunal/ros2_ws1/build/testbot/CMakeFiles/list_install_components.dir
+/home/kunal/ros2_ws1/build/testbot/CMakeFiles/install.dir
+/home/kunal/ros2_ws1/build/testbot/CMakeFiles/install/local.dir
+/home/kunal/ros2_ws1/build/testbot/CMakeFiles/install/strip.dir

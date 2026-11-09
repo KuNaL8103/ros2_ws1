@@ -1,0 +1,21 @@
+[1.620s] Invoking command in '/home/kunal/ros2_ws1/src/r2d2': PYTHONPATH=/home/kunal/ros2_ws1/build/r2d2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kunal/ros2_ws1/install/r2d2/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/r2d2 build --build-base /home/kunal/ros2_ws1/build/r2d2/build install --record /home/kunal/ros2_ws1/build/r2d2/install.log --install-scripts $base/lib/r2d2 --single-version-externally-managed install_data
+[2.016s] running egg_info
+[2.043s] writing ../../build/r2d2/r2d2.egg-info/PKG-INFO
+[2.044s] writing dependency_links to ../../build/r2d2/r2d2.egg-info/dependency_links.txt
+[2.045s] writing entry points to ../../build/r2d2/r2d2.egg-info/entry_points.txt
+[2.045s] writing requirements to ../../build/r2d2/r2d2.egg-info/requires.txt
+[2.045s] writing top-level names to ../../build/r2d2/r2d2.egg-info/top_level.txt
+[2.122s] reading manifest file '../../build/r2d2/r2d2.egg-info/SOURCES.txt'
+[2.123s] writing manifest file '../../build/r2d2/r2d2.egg-info/SOURCES.txt'
+[2.124s] running build
+[2.125s] running build_py
+[2.125s] running install
+[2.131s] running install_lib
+[2.170s] running install_data
+[2.171s] running install_egg_info
+[2.207s] removing '/home/kunal/ros2_ws1/install/r2d2/lib/python3.12/site-packages/r2d2-0.0.0-py3.12.egg-info' (and everything under it)
+[2.208s] Copying ../../build/r2d2/r2d2.egg-info to /home/kunal/ros2_ws1/install/r2d2/lib/python3.12/site-packages/r2d2-0.0.0-py3.12.egg-info
+[2.211s] running install_scripts
+[2.269s] Installing state_publisher script to /home/kunal/ros2_ws1/install/r2d2/lib/r2d2
+[2.269s] writing list of installed files to '/home/kunal/ros2_ws1/build/r2d2/install.log'
+[2.317s] Invoked command in '/home/kunal/ros2_ws1/src/r2d2' returned '0': PYTHONPATH=/home/kunal/ros2_ws1/build/r2d2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kunal/ros2_ws1/install/r2d2/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/r2d2 build --build-base /home/kunal/ros2_ws1/build/r2d2/build install --record /home/kunal/ros2_ws1/build/r2d2/install.log --install-scripts $base/lib/r2d2 --single-version-externally-managed install_data

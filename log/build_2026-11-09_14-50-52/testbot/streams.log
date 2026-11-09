@@ -1,0 +1,70 @@
+[0.022s] Invoking command in '/home/kunal/ros2_ws1/build/testbot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/kunal/ros2_ws1/src/testbot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kunal/ros2_ws1/install/testbot
+[0.510s] -- The C compiler identification is GNU 13.3.0
+[1.967s] -- The CXX compiler identification is GNU 13.3.0
+[3.442s] -- Detecting C compiler ABI info
+[4.269s] -- Detecting C compiler ABI info - done
+[4.279s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.279s] -- Detecting C compile features
+[4.280s] -- Detecting C compile features - done
+[4.582s] -- Detecting CXX compiler ABI info
+[5.262s] -- Detecting CXX compiler ABI info - done
+[5.272s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.272s] -- Detecting CXX compile features
+[5.272s] -- Detecting CXX compile features - done
+[5.312s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[5.506s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[5.604s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[5.692s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[6.044s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[6.076s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[6.116s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.157s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.322s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[6.334s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[6.517s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[6.843s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[7.040s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[7.480s] -- Found trajectory_msgs: 5.3.8 (/opt/ros/jazzy/share/trajectory_msgs/cmake)
+[7.591s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[7.756s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.757s] -- Configured cppcheck include dirs: 
+[7.757s] -- Configured cppcheck exclude dirs and/or files: 
+[7.759s] -- Added test 'flake8' to check Python code syntax and style conventions
+[7.759s] -- Configured 'flake8' exclude dirs and/or files: 
+[7.761s] -- Added test 'lint_cmake' to check CMake code style
+[7.763s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[7.766s] -- Added test 'uncrustify' to check C / C++ code style
+[7.767s] -- Configured uncrustify additional arguments: 
+[7.769s] -- Added test 'xmllint' to check XML markup files
+[7.775s] -- Configuring done (7.7s)
+[7.802s] -- Generating done (0.0s)
+[7.812s] -- Build files have been written to: /home/kunal/ros2_ws1/build/testbot
+[7.826s] Invoked command in '/home/kunal/ros2_ws1/build/testbot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/kunal/ros2_ws1/src/testbot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kunal/ros2_ws1/install/testbot
+[7.828s] Invoking command in '/home/kunal/ros2_ws1/build/testbot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/testbot -- -j8 -l8
+[7.900s] [ 50%] Building CXX object CMakeFiles/joint_publisher.dir/src/joint_publisher.cpp.o
+[14.853s] [100%] Linking CXX executable joint_publisher
+[15.522s] [100%] Built target joint_publisher
+[15.545s] Invoked command in '/home/kunal/ros2_ws1/build/testbot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/testbot -- -j8 -l8
+[15.563s] Invoking command in '/home/kunal/ros2_ws1/build/testbot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/testbot
+[15.580s] -- Install configuration: ""
+[15.581s] -- Execute custom install script
+[15.584s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/lib/testbot/joint_publisher
+[15.606s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/launch/gazebo.launch.py
+[15.626s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/urdf/testbot.urdf.xacro
+[15.645s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/config/controllers.yaml
+[15.664s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/ament_index/resource_index/package_run_dependencies/testbot
+[15.790s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/ament_index/resource_index/parent_prefix_path/testbot
+[15.807s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/environment/ament_prefix_path.sh
+[15.828s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/environment/ament_prefix_path.dsv
+[15.842s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/environment/path.sh
+[15.856s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/environment/path.dsv
+[15.870s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/local_setup.bash
+[15.885s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/local_setup.sh
+[15.899s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/local_setup.zsh
+[15.915s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/local_setup.dsv
+[15.929s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/package.dsv
+[15.943s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/ament_index/resource_index/packages/testbot
+[15.968s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/cmake/testbotConfig.cmake
+[15.982s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/cmake/testbotConfig-version.cmake
+[15.998s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/package.xml
+[16.014s] Invoked command in '/home/kunal/ros2_ws1/build/testbot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/testbot

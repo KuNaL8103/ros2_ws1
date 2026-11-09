@@ -1,0 +1,6 @@
+Invoking command in '/home/kunal/ros2_ws1/build/testbot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/kunal/ros2_ws1/src/testbot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kunal/ros2_ws1/install/testbot
+Invoked command in '/home/kunal/ros2_ws1/build/testbot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/kunal/ros2_ws1/src/testbot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kunal/ros2_ws1/install/testbot
+Invoking command in '/home/kunal/ros2_ws1/build/testbot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/testbot -- -j8 -l8
+Invoked command in '/home/kunal/ros2_ws1/build/testbot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/testbot -- -j8 -l8
+Invoking command in '/home/kunal/ros2_ws1/build/testbot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/testbot
+Invoked command in '/home/kunal/ros2_ws1/build/testbot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/testbot
