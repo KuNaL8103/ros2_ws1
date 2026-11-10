@@ -34,6 +34,7 @@
   <material name="grey">  <color rgba="0.45 0.45 0.45 1.0"/> </material>
   <material name="blue">  <color rgba="0.10 0.25 0.80 1.0"/> </material>
   <material name="red">   <color rgba="0.90 0.10 0.10 1.0"/> </material>
+  <material name="dark">  <color rgba="0.15 0.15 0.15 1.0"/> </material>
 
   <!-- ============================ links ============================= -->
   <!-- Gazebo treats a root link named "world" as the fixed world frame -->
@@ -201,6 +202,26 @@
   <!-- optical frame: z forward, x right, y down (REP-103) -->
   <link name="camera_link_optical"/>
 
+  <!-- 2D LiDAR on a short mast above the head -->
+  <link name="laser_link">
+    <visual>
+      <geometry> <cylinder radius="0.04" length="0.06"/> </geometry>
+      <origin xyz="0 0 0.03" rpy="0 0 0"/>
+      <material name="dark"/>
+    </visual>
+    <collision>
+      <geometry> <cylinder radius="0.04" length="0.06"/> </geometry>
+      <origin xyz="0 0 0.03" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0.03" rpy="0 0 0"/>
+      <inertia ixx="0.000070" ixy="0.0" ixz="0.0"
+               iyy="0.000070" iyz="0.0"
+               izz="0.000080"/>
+    </inertial>
+  </link>
+
   <!-- =========================== joints ============================= -->
   <joint name="world_to_head" type="fixed">
     <parent link="world"/>
@@ -225,6 +246,13 @@
     <parent link="camera_link"/>
     <child  link="camera_link_optical"/>
     <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
+  </joint>
+
+  <!-- scan plane 1.37 m above the floor, clear of the head -->
+  <joint name="head_to_laser" type="fixed">
+    <parent link="head"/>
+    <child  link="laser_link"/>
+    <origin xyz="0 0 0.17" rpy="0 0 0"/>
   </joint>
 
   <!-- ====================== ros2_control ============================ -->
@@ -295,6 +323,43 @@
         </clip>
         <optical_frame_id>camera_link_optical</optical_frame_id>
       </camera>
+    </sensor>
+  </gazebo>
+
+  <!--
+    Gazebo Harmonic 2D LiDAR (gpu_lidar). It publishes:
+      /scan         gz.msgs.LaserScan        -> sensor_msgs/LaserScan
+      /scan/points  gz.msgs.PointCloudPacked -> sensor_msgs/PointCloud2
+    Both are bridged in lidar.launch.py.
+  -->
+  <gazebo reference="laser_link">
+    <sensor name="lidar_sensor" type="gpu_lidar">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <always_on>true</always_on>
+      <update_rate>10</update_rate>
+      <topic>scan</topic>
+      <lidar>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>1</samples>
+            <resolution>1</resolution>
+            <min_angle>0.0</min_angle>
+            <max_angle>0.0</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.1</min>
+          <max>30.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </lidar>
     </sensor>
   </gazebo>
 
