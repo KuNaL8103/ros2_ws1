@@ -318,8 +318,8 @@ message(STATUS "Execute custom install script")
 # install("TARGETS" "joint_publisher" "DESTINATION" "lib/testbot")
 include("/home/kunal/ros2_ws1/build/testbot/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(DIRECTORY "launch" "urdf" "config" "DESTINATION" "share/testbot")
-ament_cmake_symlink_install_directory("/home/kunal/ros2_ws1/src/testbot" DIRECTORY "launch" "urdf" "config" "DESTINATION" "share/testbot")
+# install(DIRECTORY "launch" "urdf" "config" "worlds" "DESTINATION" "share/testbot")
+ament_cmake_symlink_install_directory("/home/kunal/ros2_ws1/src/testbot" DIRECTORY "launch" "urdf" "config" "worlds" "DESTINATION" "share/testbot")
 
 # install(FILES "/home/kunal/ros2_ws1/build/testbot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/testbot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/kunal/ros2_ws1/src/testbot" FILES "/home/kunal/ros2_ws1/build/testbot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/testbot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
