@@ -1,7 +1,9 @@
 /home/kunal/ros2_ws1/install/testbot/lib/testbot/joint_publisher
 /home/kunal/ros2_ws1/install/testbot/share/testbot/launch/gazebo.launch.py
+/home/kunal/ros2_ws1/install/testbot/share/testbot/launch/plot.launch.py
 /home/kunal/ros2_ws1/install/testbot/share/testbot/urdf/testbot.urdf.xacro
 /home/kunal/ros2_ws1/install/testbot/share/testbot/config/controllers.yaml
+/home/kunal/ros2_ws1/install/testbot/share/testbot/config/two_joint_layout.xml
 /home/kunal/ros2_ws1/install/testbot/share/ament_index/resource_index/package_run_dependencies/testbot
 /home/kunal/ros2_ws1/install/testbot/share/ament_index/resource_index/parent_prefix_path/testbot
 /home/kunal/ros2_ws1/install/testbot/share/testbot/environment/ament_prefix_path.sh

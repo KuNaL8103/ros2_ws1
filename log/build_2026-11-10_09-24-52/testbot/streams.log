@@ -1,0 +1,28 @@
+[0.031s] Invoking command in '/home/kunal/ros2_ws1/build/testbot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/testbot -- -j8 -l8
+[0.262s] [100%] Built target joint_publisher
+[0.285s] Invoked command in '/home/kunal/ros2_ws1/build/testbot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/testbot -- -j8 -l8
+[0.307s] Invoking command in '/home/kunal/ros2_ws1/build/testbot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/testbot
+[0.324s] -- Install configuration: ""
+[0.326s] -- Execute custom install script
+[0.327s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/lib/testbot/joint_publisher
+[0.328s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/launch/gazebo.launch.py
+[0.329s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/launch/plot.launch.py
+[0.329s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/urdf/testbot.urdf.xacro
+[0.330s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/config/controllers.yaml
+[0.330s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/config/two_joint_layout.xml
+[0.330s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/ament_index/resource_index/package_run_dependencies/testbot
+[0.331s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/ament_index/resource_index/parent_prefix_path/testbot
+[0.331s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/environment/ament_prefix_path.sh
+[0.332s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/environment/ament_prefix_path.dsv
+[0.332s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/environment/path.sh
+[0.333s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/environment/path.dsv
+[0.333s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/local_setup.bash
+[0.333s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/local_setup.sh
+[0.334s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/local_setup.zsh
+[0.334s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/local_setup.dsv
+[0.334s] -- Symlinking: /home/kunal/ros2_ws1/install/testbot/share/testbot/package.dsv
+[0.355s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/ament_index/resource_index/packages/testbot
+[0.356s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/cmake/testbotConfig.cmake
+[0.356s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/cmake/testbotConfig-version.cmake
+[0.356s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/testbot/share/testbot/package.xml
+[0.361s] Invoked command in '/home/kunal/ros2_ws1/build/testbot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/testbot
