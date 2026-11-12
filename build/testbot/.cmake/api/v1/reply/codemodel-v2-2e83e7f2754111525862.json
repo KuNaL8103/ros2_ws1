@@ -18,7 +18,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -35,7 +36,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -43,8 +45,15 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "depth_cloud_frame_fix::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-depth_cloud_frame_fix-4ca2c97fda2230259d02.json",
+					"name" : "depth_cloud_frame_fix",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "joint_publisher::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-joint_publisher-2ffe70556cb440589701.json",
+					"jsonFile" : "target-joint_publisher-5e0049885fc39483f597.json",
 					"name" : "joint_publisher",
 					"projectIndex" : 0
 				},

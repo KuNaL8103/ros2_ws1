@@ -315,7 +315,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "joint_publisher" "DESTINATION" "lib/testbot")
+# install("TARGETS" "joint_publisher" "depth_cloud_frame_fix" "DESTINATION" "lib/testbot")
 include("/home/kunal/ros2_ws1/build/testbot/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "urdf" "config" "worlds" "DESTINATION" "share/testbot")

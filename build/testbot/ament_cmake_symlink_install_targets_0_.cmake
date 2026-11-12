@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/kunal/ros2_ws1/build/testbot/joint_publisher" "TARGETS" "joint_publisher" "DESTINATION" "lib/testbot")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/kunal/ros2_ws1/build/testbot/joint_publisher" "/home/kunal/ros2_ws1/build/testbot/depth_cloud_frame_fix" "TARGETS" "joint_publisher" "depth_cloud_frame_fix" "DESTINATION" "lib/testbot")

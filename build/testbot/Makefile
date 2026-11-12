@@ -210,6 +210,43 @@ joint_publisher/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_publisher.dir/build.make CMakeFiles/joint_publisher.dir/build
 .PHONY : joint_publisher/fast
 
+#=============================================================================
+# Target rules for targets named depth_cloud_frame_fix
+
+# Build rule for target.
+depth_cloud_frame_fix: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_cloud_frame_fix
+.PHONY : depth_cloud_frame_fix
+
+# fast build rule for target.
+depth_cloud_frame_fix/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/depth_cloud_frame_fix.dir/build.make CMakeFiles/depth_cloud_frame_fix.dir/build
+.PHONY : depth_cloud_frame_fix/fast
+
+src/depth_cloud_frame_fix.o: src/depth_cloud_frame_fix.cpp.o
+.PHONY : src/depth_cloud_frame_fix.o
+
+# target to build an object file
+src/depth_cloud_frame_fix.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/depth_cloud_frame_fix.dir/build.make CMakeFiles/depth_cloud_frame_fix.dir/src/depth_cloud_frame_fix.cpp.o
+.PHONY : src/depth_cloud_frame_fix.cpp.o
+
+src/depth_cloud_frame_fix.i: src/depth_cloud_frame_fix.cpp.i
+.PHONY : src/depth_cloud_frame_fix.i
+
+# target to preprocess a source file
+src/depth_cloud_frame_fix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/depth_cloud_frame_fix.dir/build.make CMakeFiles/depth_cloud_frame_fix.dir/src/depth_cloud_frame_fix.cpp.i
+.PHONY : src/depth_cloud_frame_fix.cpp.i
+
+src/depth_cloud_frame_fix.s: src/depth_cloud_frame_fix.cpp.s
+.PHONY : src/depth_cloud_frame_fix.s
+
+# target to generate assembly for a file
+src/depth_cloud_frame_fix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/depth_cloud_frame_fix.dir/build.make CMakeFiles/depth_cloud_frame_fix.dir/src/depth_cloud_frame_fix.cpp.s
+.PHONY : src/depth_cloud_frame_fix.cpp.s
+
 src/joint_publisher.o: src/joint_publisher.cpp.o
 .PHONY : src/joint_publisher.o
 
@@ -249,7 +286,11 @@ help:
 	@echo "... test"
 	@echo "... testbot_uninstall"
 	@echo "... uninstall"
+	@echo "... depth_cloud_frame_fix"
 	@echo "... joint_publisher"
+	@echo "... src/depth_cloud_frame_fix.o"
+	@echo "... src/depth_cloud_frame_fix.i"
+	@echo "... src/depth_cloud_frame_fix.s"
 	@echo "... src/joint_publisher.o"
 	@echo "... src/joint_publisher.i"
 	@echo "... src/joint_publisher.s"

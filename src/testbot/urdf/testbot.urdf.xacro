@@ -222,6 +222,28 @@
     </inertial>
   </link>
 
+  <!-- depth camera, mounted beside the colour camera -->
+  <link name="depth_camera_link">
+    <visual>
+      <geometry> <box size="0.04 0.06 0.04"/> </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="dark"/>
+    </visual>
+    <collision>
+      <geometry> <box size="0.04 0.06 0.04"/> </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0000433" ixy="0.0" ixz="0.0"
+               iyy="0.0000267" iyz="0.0"
+               izz="0.0000433"/>
+    </inertial>
+  </link>
+
+  <link name="depth_camera_optical"/>
+
   <!-- =========================== joints ============================= -->
   <joint name="world_to_head" type="fixed">
     <parent link="world"/>
@@ -253,6 +275,21 @@
     <parent link="head"/>
     <child  link="laser_link"/>
     <origin xyz="0 0 0.17" rpy="0 0 0"/>
+  </joint>
+
+  <!-- eye-level depth camera, tilted down like the colour camera -->
+  <joint name="head_to_depth_camera" type="fixed">
+    <parent link="head"/>
+    <child  link="depth_camera_link"/>
+    <origin xyz="0.12 -0.08 0.08" rpy="0 0.5 0"/>
+  </joint>
+
+  <!-- Gazebo camera frame (+X forward, +Y left, +Z up) to ROS optical
+       frame (+Z forward, +X right, +Y down) -->
+  <joint name="depth_camera_optical_joint" type="fixed">
+    <parent link="depth_camera_link"/>
+    <child  link="depth_camera_optical"/>
+    <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
   </joint>
 
   <!-- ====================== ros2_control ============================ -->
@@ -360,6 +397,37 @@
           <resolution>0.01</resolution>
         </range>
       </lidar>
+    </sensor>
+  </gazebo>
+
+  <!--
+    Gazebo Harmonic RGBD camera. It publishes (with <topic>depth_camera):
+      /depth_camera/image         RGB
+      /depth_camera/depth_image   float32 depth (metres)
+      /depth_camera/points        PointCloud2
+      /depth_camera/camera_info
+    depth.launch.py bridges these to the lesson's topic names.
+  -->
+  <gazebo reference="depth_camera_link">
+    <sensor name="depth_camera" type="rgbd_camera">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <always_on>true</always_on>
+      <update_rate>30</update_rate>
+      <topic>depth_camera</topic>
+      <camera>
+        <horizontal_fov>1.2</horizontal_fov>
+        <image>
+          <format>R8G8B8</format>
+          <width>640</width>
+          <height>480</height>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>10.0</far>
+        </clip>
+        <optical_frame_id>depth_camera_optical</optical_frame_id>
+      </camera>
     </sensor>
   </gazebo>
 

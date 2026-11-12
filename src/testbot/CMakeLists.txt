@@ -8,12 +8,17 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(trajectory_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 add_executable(joint_publisher src/joint_publisher.cpp)
 ament_target_dependencies(joint_publisher rclcpp trajectory_msgs)
 
+add_executable(depth_cloud_frame_fix src/depth_cloud_frame_fix.cpp)
+ament_target_dependencies(depth_cloud_frame_fix rclcpp sensor_msgs)
+
 install(TARGETS
   joint_publisher
+  depth_cloud_frame_fix
   DESTINATION lib/${PROJECT_NAME}
 )
 

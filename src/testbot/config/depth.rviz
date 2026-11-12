@@ -1,0 +1,105 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+    Property Tree Widget:
+      Splitter Ratio: 0.5
+    Tree Height: 500
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 0.5
+      Plane Cell Count: 20
+      Color: 160; 160; 160
+      Reference Frame: <Fixed Frame>
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_description
+      Visual Enabled: true
+      Collision Enabled: false
+      Alpha: 1
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: false
+      Show Names: true
+      Marker Scale: 0.3
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Depth points
+      Enabled: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /depth_camera/points
+      Style: Points
+      Size (m): 0.01
+      Alpha: 1
+      Decay Time: 0
+      Color Transformer: AxisColor
+      Position Transformer: XYZ
+    - Class: rviz_default_plugins/Image
+      Name: Depth image
+      Enabled: false
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /depth_camera/depth/image_raw
+      Normalize Range: true
+      Min Value: 0
+      Max Value: 10
+      Median window: 5
+    - Class: rviz_default_plugins/Image
+      Name: Colour image
+      Enabled: false
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /depth_camera/image_raw
+      Normalize Range: false
+      Median window: 5
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 6
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.06
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0.8
+      Name: Current View
+      Pitch: 0.4
+      Target Frame: world
+      Yaw: 0.8
+    Saved: ~
+Window Geometry:
+  Height: 800
+  Width: 1200
+  X: 100
+  Y: 100

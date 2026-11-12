@@ -1,10 +1,13 @@
 /home/kunal/ros2_ws1/install/testbot/lib/testbot/joint_publisher
+/home/kunal/ros2_ws1/install/testbot/lib/testbot/depth_cloud_frame_fix
 /home/kunal/ros2_ws1/install/testbot/share/testbot/launch/camera.launch.py
+/home/kunal/ros2_ws1/install/testbot/share/testbot/launch/depth.launch.py
 /home/kunal/ros2_ws1/install/testbot/share/testbot/launch/gazebo.launch.py
 /home/kunal/ros2_ws1/install/testbot/share/testbot/launch/lidar.launch.py
 /home/kunal/ros2_ws1/install/testbot/share/testbot/launch/plot.launch.py
 /home/kunal/ros2_ws1/install/testbot/share/testbot/urdf/testbot.urdf.xacro
 /home/kunal/ros2_ws1/install/testbot/share/testbot/config/controllers.yaml
+/home/kunal/ros2_ws1/install/testbot/share/testbot/config/depth.rviz
 /home/kunal/ros2_ws1/install/testbot/share/testbot/config/lidar.rviz
 /home/kunal/ros2_ws1/install/testbot/share/testbot/config/two_joint_layout.xml
 /home/kunal/ros2_ws1/install/testbot/share/testbot/worlds/camera.sdf
