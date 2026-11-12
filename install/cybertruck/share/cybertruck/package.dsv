@@ -1,0 +1,8 @@
+source;share/cybertruck/hook/cmake_prefix_path.ps1
+source;share/cybertruck/hook/cmake_prefix_path.dsv
+source;share/cybertruck/hook/cmake_prefix_path.sh
+source;share/cybertruck/local_setup.bash
+source;share/cybertruck/local_setup.dsv
+source;share/cybertruck/local_setup.ps1
+source;share/cybertruck/local_setup.sh
+source;share/cybertruck/local_setup.zsh

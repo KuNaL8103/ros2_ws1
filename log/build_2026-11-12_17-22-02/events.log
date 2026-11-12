@@ -1,0 +1,246 @@
+[0.000000] (-) TimerEvent: {}
+[0.000113] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.000154] (-) JobUnselected: {'identifier': 'my_package'}
+[0.000176] (-) JobUnselected: {'identifier': 'my_robot'}
+[0.000192] (-) JobUnselected: {'identifier': 'py_pubsub'}
+[0.000204] (-) JobUnselected: {'identifier': 'r2d2'}
+[0.000218] (-) JobUnselected: {'identifier': 'testbot'}
+[0.000234] (cybertruck) JobQueued: {'identifier': 'cybertruck', 'dependencies': OrderedDict()}
+[0.000252] (cybertruck) JobStarted: {'identifier': 'cybertruck'}
+[0.016049] (cybertruck) JobProgress: {'identifier': 'cybertruck', 'progress': 'cmake'}
+[0.021077] (cybertruck) Command: {'cmd': ['/usr/bin/cmake', '/home/kunal/ros2_ws1/src/cybertruck', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/kunal/ros2_ws1/install/cybertruck'], 'cwd': '/home/kunal/ros2_ws1/build/cybertruck', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'no_proxy': '127.0.0.1,localhost,::1', 'AI_AGENT': 'opencode', 'OPENCODE_SESSION_ID': 'ses_e43d50189ffeKiyAaBxiHPNjjV', 'USER': 'kunal', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'AGENT': '1', 'GIT_ASKPASS': '/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/kunal', 'OLDPWD': '/home/kunal/ros2_ws1', 'TERM_PROGRAM_VERSION': '1.146.0', 'NO_PROXY': '127.0.0.1,localhost,::1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-8ca25e28-56ec-40b3-9db9-0292fb41bcde.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', '_colcon_cd_root': '/opt/ros/jazzy/', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'kunal', 'NAME': 'Acer-Nitro-V', 'WSL_INTEROP': '/run/WSL/463_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'OPENCODE_TERMINAL': '1', 'TERM': 'xterm-256color', 'OPENCODE': '1', 'PATH': '/home/kunal/.opencode/bin:/home/kunal/.okc/bin:/home/kunal/.local/bin:/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/bin/remote-cli:/home/kunal/.local/bin:/home/kunal/.opencode/bin:/home/kunal/.okc/bin:/home/kunal/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/MinGW/bin:/mnt/c/mongosh-2.5.1/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/WSL/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/MinGW/bin:/mnt/c/mongosh-2.5.1/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/usbipd-win/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/MinGW/bin:/mnt/c/mongosh-2.5.1/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Users/kunal/.local/bin:/mnt/c/Users/kunal/AppData/Roaming/npm:/mnt/c/Users/kunal/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/kunal/.vscode/extensions/ms-python.debugpy-2026.6.0/bundled/scripts/noConfigScripts:/mnt/c/Users/kunal/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/kunal/.local/bin:/mnt/c/Users/kunal/AppData/Roaming/npm:/mnt/c/Users/kunal/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/kunal/AppData/Local/Programs/Python/Python313:/mnt/c/Users/kunal/AppData/Local/Programs/Python/Python313/Scripts:/snap/bin:/home/kunal/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/bin/copilot-shim', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bebd3a9b9d.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/kunal/ros2_ws1/build/cybertruck', 'COPILOT_DEBUG_NONCE': 'bf46b1a3bbe76dfdc5a8e2ac8cdbf42c', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'VSCODE_WSL_EXT_LOCATION/up'}), 'shell': False}
+[0.098339] (-) TimerEvent: {}
+[0.198590] (-) TimerEvent: {}
+[0.298945] (-) TimerEvent: {}
+[0.399292] (-) TimerEvent: {}
+[0.499585] (-) TimerEvent: {}
+[0.599885] (-) TimerEvent: {}
+[0.631804] (cybertruck) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.700067] (-) TimerEvent: {}
+[0.800421] (-) TimerEvent: {}
+[0.900705] (-) TimerEvent: {}
+[1.000977] (-) TimerEvent: {}
+[1.101265] (-) TimerEvent: {}
+[1.201536] (-) TimerEvent: {}
+[1.301797] (-) TimerEvent: {}
+[1.402101] (-) TimerEvent: {}
+[1.502464] (-) TimerEvent: {}
+[1.602815] (-) TimerEvent: {}
+[1.703127] (-) TimerEvent: {}
+[1.803478] (-) TimerEvent: {}
+[1.903806] (-) TimerEvent: {}
+[2.004083] (-) TimerEvent: {}
+[2.104363] (-) TimerEvent: {}
+[2.107307] (cybertruck) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[2.204517] (-) TimerEvent: {}
+[2.304786] (-) TimerEvent: {}
+[2.405178] (-) TimerEvent: {}
+[2.505451] (-) TimerEvent: {}
+[2.605746] (-) TimerEvent: {}
+[2.706075] (-) TimerEvent: {}
+[2.806368] (-) TimerEvent: {}
+[2.906664] (-) TimerEvent: {}
+[3.006939] (-) TimerEvent: {}
+[3.107221] (-) TimerEvent: {}
+[3.207509] (-) TimerEvent: {}
+[3.291798] (cybertruck) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.307714] (-) TimerEvent: {}
+[3.408007] (-) TimerEvent: {}
+[3.508342] (-) TimerEvent: {}
+[3.608610] (-) TimerEvent: {}
+[3.708954] (-) TimerEvent: {}
+[3.809274] (-) TimerEvent: {}
+[3.909594] (-) TimerEvent: {}
+[4.009937] (-) TimerEvent: {}
+[4.110422] (-) TimerEvent: {}
+[4.210892] (-) TimerEvent: {}
+[4.311250] (-) TimerEvent: {}
+[4.348981] (cybertruck) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.363356] (cybertruck) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.364172] (cybertruck) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.366517] (cybertruck) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.411505] (-) TimerEvent: {}
+[4.512081] (-) TimerEvent: {}
+[4.612995] (-) TimerEvent: {}
+[4.713356] (-) TimerEvent: {}
+[4.813709] (-) TimerEvent: {}
+[4.837425] (cybertruck) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.913902] (-) TimerEvent: {}
+[5.014210] (-) TimerEvent: {}
+[5.114544] (-) TimerEvent: {}
+[5.214993] (-) TimerEvent: {}
+[5.315293] (-) TimerEvent: {}
+[5.415584] (-) TimerEvent: {}
+[5.515896] (-) TimerEvent: {}
+[5.616201] (-) TimerEvent: {}
+[5.716547] (-) TimerEvent: {}
+[5.747582] (cybertruck) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.758092] (cybertruck) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.758980] (cybertruck) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.759422] (cybertruck) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.791964] (cybertruck) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[5.816717] (-) TimerEvent: {}
+[5.917159] (-) TimerEvent: {}
+[5.986701] (cybertruck) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[6.017305] (-) TimerEvent: {}
+[6.084189] (cybertruck) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[6.117491] (-) TimerEvent: {}
+[6.181626] (cybertruck) StdoutLine: {'line': b'-- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[6.217673] (-) TimerEvent: {}
+[6.317977] (-) TimerEvent: {}
+[6.418396] (-) TimerEvent: {}
+[6.518918] (-) TimerEvent: {}
+[6.619316] (-) TimerEvent: {}
+[6.698005] (cybertruck) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[6.719638] (-) TimerEvent: {}
+[6.759022] (cybertruck) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[6.819888] (-) TimerEvent: {}
+[6.851068] (cybertruck) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.920263] (-) TimerEvent: {}
+[6.930562] (cybertruck) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.020414] (-) TimerEvent: {}
+[7.120745] (-) TimerEvent: {}
+[7.132955] (cybertruck) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[7.143813] (cybertruck) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[7.220982] (-) TimerEvent: {}
+[7.321343] (-) TimerEvent: {}
+[7.399489] (cybertruck) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[7.421543] (-) TimerEvent: {}
+[7.521895] (-) TimerEvent: {}
+[7.622211] (-) TimerEvent: {}
+[7.722591] (-) TimerEvent: {}
+[7.772412] (cybertruck) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[7.822758] (-) TimerEvent: {}
+[7.923081] (-) TimerEvent: {}
+[7.965043] (cybertruck) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[8.023268] (-) TimerEvent: {}
+[8.123582] (-) TimerEvent: {}
+[8.223918] (-) TimerEvent: {}
+[8.324443] (-) TimerEvent: {}
+[8.396371] (cybertruck) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.8 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[8.424584] (-) TimerEvent: {}
+[8.466237] (cybertruck) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[8.524787] (-) TimerEvent: {}
+[8.625147] (-) TimerEvent: {}
+[8.640145] (cybertruck) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[8.640583] (cybertruck) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[8.640741] (cybertruck) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[8.643348] (cybertruck) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[8.643784] (cybertruck) StdoutLine: {'line': b"-- Configured 'flake8' exclude dirs and/or files: \n"}
+[8.645532] (cybertruck) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[8.648057] (cybertruck) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[8.651344] (cybertruck) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[8.651801] (cybertruck) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[8.653868] (cybertruck) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[8.659261] (cybertruck) StdoutLine: {'line': b'-- Configuring done (8.6s)\n'}
+[8.690730] (cybertruck) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[8.702183] (cybertruck) StdoutLine: {'line': b'-- Build files have been written to: /home/kunal/ros2_ws1/build/cybertruck\n'}
+[8.717146] (cybertruck) CommandEnded: {'returncode': 0}
+[8.718015] (cybertruck) JobProgress: {'identifier': 'cybertruck', 'progress': 'build'}
+[8.718846] (cybertruck) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/kunal/ros2_ws1/build/cybertruck', '--', '-j8', '-l8'], 'cwd': '/home/kunal/ros2_ws1/build/cybertruck', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'no_proxy': '127.0.0.1,localhost,::1', 'AI_AGENT': 'opencode', 'OPENCODE_SESSION_ID': 'ses_e43d50189ffeKiyAaBxiHPNjjV', 'USER': 'kunal', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'AGENT': '1', 'GIT_ASKPASS': '/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/kunal', 'OLDPWD': '/home/kunal/ros2_ws1', 'TERM_PROGRAM_VERSION': '1.146.0', 'NO_PROXY': '127.0.0.1,localhost,::1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-8ca25e28-56ec-40b3-9db9-0292fb41bcde.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', '_colcon_cd_root': '/opt/ros/jazzy/', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'kunal', 'NAME': 'Acer-Nitro-V', 'WSL_INTEROP': '/run/WSL/463_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'OPENCODE_TERMINAL': '1', 'TERM': 'xterm-256color', 'OPENCODE': '1', 'PATH': '/home/kunal/.opencode/bin:/home/kunal/.okc/bin:/home/kunal/.local/bin:/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/bin/remote-cli:/home/kunal/.local/bin:/home/kunal/.opencode/bin:/home/kunal/.okc/bin:/home/kunal/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/MinGW/bin:/mnt/c/mongosh-2.5.1/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/WSL/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/MinGW/bin:/mnt/c/mongosh-2.5.1/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/usbipd-win/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/MinGW/bin:/mnt/c/mongosh-2.5.1/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Users/kunal/.local/bin:/mnt/c/Users/kunal/AppData/Roaming/npm:/mnt/c/Users/kunal/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/kunal/.vscode/extensions/ms-python.debugpy-2026.6.0/bundled/scripts/noConfigScripts:/mnt/c/Users/kunal/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/kunal/.local/bin:/mnt/c/Users/kunal/AppData/Roaming/npm:/mnt/c/Users/kunal/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/kunal/AppData/Local/Programs/Python/Python313:/mnt/c/Users/kunal/AppData/Local/Programs/Python/Python313/Scripts:/snap/bin:/home/kunal/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/bin/copilot-shim', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bebd3a9b9d.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/kunal/ros2_ws1/build/cybertruck', 'COPILOT_DEBUG_NONCE': 'bf46b1a3bbe76dfdc5a8e2ac8cdbf42c', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'VSCODE_WSL_EXT_LOCATION/up'}), 'shell': False}
+[8.725358] (-) TimerEvent: {}
+[8.825777] (-) TimerEvent: {}
+[8.830852] (cybertruck) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/cmd_vel_publisher.dir/src/cmd_vel_publisher.cpp.o\n'}
+[8.925911] (-) TimerEvent: {}
+[9.026323] (-) TimerEvent: {}
+[9.126721] (-) TimerEvent: {}
+[9.227111] (-) TimerEvent: {}
+[9.327459] (-) TimerEvent: {}
+[9.427782] (-) TimerEvent: {}
+[9.528049] (-) TimerEvent: {}
+[9.628381] (-) TimerEvent: {}
+[9.728781] (-) TimerEvent: {}
+[9.829099] (-) TimerEvent: {}
+[9.929409] (-) TimerEvent: {}
+[10.029747] (-) TimerEvent: {}
+[10.130107] (-) TimerEvent: {}
+[10.230514] (-) TimerEvent: {}
+[10.330926] (-) TimerEvent: {}
+[10.431312] (-) TimerEvent: {}
+[10.531650] (-) TimerEvent: {}
+[10.631970] (-) TimerEvent: {}
+[10.732280] (-) TimerEvent: {}
+[10.832614] (-) TimerEvent: {}
+[10.932943] (-) TimerEvent: {}
+[11.033359] (-) TimerEvent: {}
+[11.133742] (-) TimerEvent: {}
+[11.234158] (-) TimerEvent: {}
+[11.334483] (-) TimerEvent: {}
+[11.434794] (-) TimerEvent: {}
+[11.535152] (-) TimerEvent: {}
+[11.635479] (-) TimerEvent: {}
+[11.735808] (-) TimerEvent: {}
+[11.836219] (-) TimerEvent: {}
+[11.936629] (-) TimerEvent: {}
+[12.036967] (-) TimerEvent: {}
+[12.137278] (-) TimerEvent: {}
+[12.237579] (-) TimerEvent: {}
+[12.337932] (-) TimerEvent: {}
+[12.438308] (-) TimerEvent: {}
+[12.538742] (-) TimerEvent: {}
+[12.639090] (-) TimerEvent: {}
+[12.739440] (-) TimerEvent: {}
+[12.839820] (-) TimerEvent: {}
+[12.940169] (-) TimerEvent: {}
+[13.040528] (-) TimerEvent: {}
+[13.140910] (-) TimerEvent: {}
+[13.241294] (-) TimerEvent: {}
+[13.341657] (-) TimerEvent: {}
+[13.442038] (-) TimerEvent: {}
+[13.542379] (-) TimerEvent: {}
+[13.642722] (-) TimerEvent: {}
+[13.743009] (-) TimerEvent: {}
+[13.843380] (-) TimerEvent: {}
+[13.943774] (-) TimerEvent: {}
+[14.044144] (-) TimerEvent: {}
+[14.144483] (-) TimerEvent: {}
+[14.244854] (-) TimerEvent: {}
+[14.345153] (-) TimerEvent: {}
+[14.445471] (-) TimerEvent: {}
+[14.545789] (-) TimerEvent: {}
+[14.646121] (-) TimerEvent: {}
+[14.746441] (-) TimerEvent: {}
+[14.846772] (-) TimerEvent: {}
+[14.947088] (-) TimerEvent: {}
+[15.047398] (-) TimerEvent: {}
+[15.147723] (-) TimerEvent: {}
+[15.248006] (-) TimerEvent: {}
+[15.304192] (cybertruck) StdoutLine: {'line': b'[100%] Linking CXX executable cmd_vel_publisher\n'}
+[15.348194] (-) TimerEvent: {}
+[15.448493] (-) TimerEvent: {}
+[15.548775] (-) TimerEvent: {}
+[15.649083] (-) TimerEvent: {}
+[15.749454] (-) TimerEvent: {}
+[15.849898] (-) TimerEvent: {}
+[15.876328] (cybertruck) StdoutLine: {'line': b'[100%] Built target cmd_vel_publisher\n'}
+[15.891182] (cybertruck) CommandEnded: {'returncode': 0}
+[15.892462] (cybertruck) JobProgress: {'identifier': 'cybertruck', 'progress': 'install'}
+[15.905729] (cybertruck) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/kunal/ros2_ws1/build/cybertruck'], 'cwd': '/home/kunal/ros2_ws1/build/cybertruck', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'no_proxy': '127.0.0.1,localhost,::1', 'AI_AGENT': 'opencode', 'OPENCODE_SESSION_ID': 'ses_e43d50189ffeKiyAaBxiHPNjjV', 'USER': 'kunal', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'AGENT': '1', 'GIT_ASKPASS': '/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/kunal', 'OLDPWD': '/home/kunal/ros2_ws1', 'TERM_PROGRAM_VERSION': '1.146.0', 'NO_PROXY': '127.0.0.1,localhost,::1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-8ca25e28-56ec-40b3-9db9-0292fb41bcde.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', '_colcon_cd_root': '/opt/ros/jazzy/', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'kunal', 'NAME': 'Acer-Nitro-V', 'WSL_INTEROP': '/run/WSL/463_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'OPENCODE_TERMINAL': '1', 'TERM': 'xterm-256color', 'OPENCODE': '1', 'PATH': '/home/kunal/.opencode/bin:/home/kunal/.okc/bin:/home/kunal/.local/bin:/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/bin/remote-cli:/home/kunal/.local/bin:/home/kunal/.opencode/bin:/home/kunal/.okc/bin:/home/kunal/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/MinGW/bin:/mnt/c/mongosh-2.5.1/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/WSL/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/MinGW/bin:/mnt/c/mongosh-2.5.1/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/usbipd-win/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/MinGW/bin:/mnt/c/mongosh-2.5.1/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Users/kunal/.local/bin:/mnt/c/Users/kunal/AppData/Roaming/npm:/mnt/c/Users/kunal/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/kunal/.vscode/extensions/ms-python.debugpy-2026.6.0/bundled/scripts/noConfigScripts:/mnt/c/Users/kunal/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/kunal/.local/bin:/mnt/c/Users/kunal/AppData/Roaming/npm:/mnt/c/Users/kunal/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/kunal/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/kunal/AppData/Local/Programs/Python/Python313:/mnt/c/Users/kunal/AppData/Local/Programs/Python/Python313/Scripts:/snap/bin:/home/kunal/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/kunal/.vscode-server/bin/69047191fc427f2f92828279aae1d90d8eeda7ab/bin/copilot-shim', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bebd3a9b9d.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/kunal/ros2_ws1/build/cybertruck', 'COPILOT_DEBUG_NONCE': 'bf46b1a3bbe76dfdc5a8e2ac8cdbf42c', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'VSCODE_WSL_EXT_LOCATION/up'}), 'shell': False}
+[15.918414] (cybertruck) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.919000] (cybertruck) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[15.921037] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/lib/cybertruck/cmd_vel_publisher\n'}
+[15.936096] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/launch/gazebo.launch.py\n'}
+[15.948367] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/urdf/cybertruck.urdf.xacro\n'}
+[15.950020] (-) TimerEvent: {}
+[15.962227] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/config/controllers.yaml\n'}
+[15.975540] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/worlds/cybertruck.sdf\n'}
+[15.990096] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/ament_index/resource_index/package_run_dependencies/cybertruck\n'}
+[16.003644] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/ament_index/resource_index/parent_prefix_path/cybertruck\n'}
+[16.017455] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/environment/ament_prefix_path.sh\n'}
+[16.029996] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/environment/ament_prefix_path.dsv\n'}
+[16.042385] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/environment/path.sh\n'}
+[16.050198] (-) TimerEvent: {}
+[16.056454] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/environment/path.dsv\n'}
+[16.068571] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/local_setup.bash\n'}
+[16.080556] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/local_setup.sh\n'}
+[16.094330] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/local_setup.zsh\n'}
+[16.107386] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/local_setup.dsv\n'}
+[16.120132] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/package.dsv\n'}
+[16.133521] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/ament_index/resource_index/packages/cybertruck\n'}
+[16.148295] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/cmake/cybertruckConfig.cmake\n'}
+[16.150347] (-) TimerEvent: {}
+[16.161298] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/cmake/cybertruckConfig-version.cmake\n'}
+[16.175429] (cybertruck) StdoutLine: {'line': b'-- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/package.xml\n'}
+[16.189674] (cybertruck) CommandEnded: {'returncode': 0}
+[16.236510] (cybertruck) JobEnded: {'identifier': 'cybertruck', 'rc': 0}
+[16.238054] (-) EventReactorShutdown: {}

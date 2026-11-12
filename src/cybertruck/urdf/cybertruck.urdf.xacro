@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!--
+  Cybertruck-style mobile robot.
+
+  v = 0.1 m/s, omega = 0.1 rad/s
+  wheel_radius r = 0.4175 m, wheel separation L = 1.46 m
+
+  Rear wheels are driven, front wheels are frictionless casters.
+  base_frame = body, odom_frame = odom.
+-->
+<robot name="cybertruck" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:property name="wheel_radius" value="0.4175"/>
+  <xacro:property name="wheel_length" value="0.3"/>
+  <xacro:property name="track" value="1.46"/>
+  <xacro:property name="half_track" value="0.73"/>
+  <xacro:property name="half_wheelbase" value="1.4"/>
+
+  <xacro:property name="body_x" value="4.0"/>
+  <xacro:property name="body_y" value="1.8"/>
+  <xacro:property name="body_z" value="0.8"/>
+  <xacro:property name="body_z_offset" value="1.0"/>
+  <xacro:property name="body_mass" value="800.0"/>
+
+  <xacro:property name="rear_wheel_mass" value="30.0"/>
+  <xacro:property name="front_wheel_mass" value="20.0"/>
+
+  <material name="silver"> <color rgba="0.75 0.77 0.80 1.0"/> </material>
+  <material name="dark">   <color rgba="0.15 0.15 0.15 1.0"/> </material>
+
+  <!-- ============================== links ============================ -->
+  <link name="body">
+    <visual>
+      <geometry> <box size="${body_x} ${body_y} ${body_z}"/> </geometry>
+      <origin xyz="0 0 ${body_z_offset}" rpy="0 0 0"/>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <geometry> <box size="${body_x} ${body_y} ${body_z}"/> </geometry>
+      <origin xyz="0 0 ${body_z_offset}" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="${body_mass}"/>
+      <origin xyz="0 0 ${body_z_offset}" rpy="0 0 0"/>
+      <inertia ixx="${body_mass * (body_y*body_y + body_z*body_z) / 12}"
+               ixy="0.0" ixz="0.0"
+               iyy="${body_mass * (body_x*body_x + body_z*body_z) / 12}"
+               iyz="0.0"
+               izz="${body_mass * (body_x*body_x + body_y*body_y) / 12}"/>
+    </inertial>
+  </link>
+
+  <xacro:macro name="wheel" params="prefix x y mass">
+    <link name="${prefix}_wheel">
+      <visual>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+        <material name="dark"/>
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+      </collision>
+      <inertial>
+        <mass value="${mass}"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <!-- axle along Y after the visual rotation above -->
+        <inertia ixx="${mass * (3*wheel_radius*wheel_radius + wheel_length*wheel_length) / 12}"
+                 ixy="0.0" ixz="0.0"
+                 iyy="${mass * wheel_radius * wheel_radius / 2}"
+                 iyz="0.0"
+                 izz="${mass * (3*wheel_radius*wheel_radius + wheel_length*wheel_length) / 12}"/>
+      </inertial>
+    </link>
+
+    <joint name="body_to_${prefix}_wheel" type="continuous">
+      <parent link="body"/>
+      <child  link="${prefix}_wheel"/>
+      <origin xyz="${x} ${y} ${wheel_radius}" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+      <dynamics damping="0.05" friction="0.0"/>
+    </joint>
+  </xacro:macro>
+
+  <xacro:wheel prefix="back_left"  x="${-half_wheelbase}" y="${half_track}"  mass="${rear_wheel_mass}"/>
+  <xacro:wheel prefix="back_right" x="${-half_wheelbase}" y="${-half_track}" mass="${rear_wheel_mass}"/>
+  <xacro:wheel prefix="front_left" x="${half_wheelbase}"  y="${half_track}"  mass="${front_wheel_mass}"/>
+  <xacro:wheel prefix="front_right" x="${half_wheelbase}" y="${-half_track}" mass="${front_wheel_mass}"/>
+
+  <!-- front wheels are casters: no friction at all -->
+  <gazebo reference="front_left_wheel">
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+  </gazebo>
+  <gazebo reference="front_right_wheel">
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+  </gazebo>
+
+  <!-- rear wheels need real traction -->
+  <gazebo reference="back_left_wheel">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+  <gazebo reference="back_right_wheel">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+  </gazebo>
+
+  <!-- =========================== ros2_control ======================== -->
+  <ros2_control name="CybertruckSystem" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+
+    <joint name="body_to_back_left_wheel">
+      <command_interface name="velocity"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="body_to_back_right_wheel">
+      <command_interface name="velocity"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <!-- passive front wheels: state only, so joint_state_broadcaster
+         reports them and robot_state_publisher can build their TF -->
+    <joint name="body_to_front_left_wheel">
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="body_to_front_right_wheel">
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+  <gazebo>
+    <plugin filename="gz_ros2_control-system"
+            name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>$(find cybertruck)/config/controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+</robot>

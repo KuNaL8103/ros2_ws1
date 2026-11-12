@@ -1,0 +1,29 @@
+[0.015s] Invoking command in '/home/kunal/ros2_ws1/build/cybertruck': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/cybertruck -- -j8 -l8
+[0.106s] [ 50%] Building CXX object CMakeFiles/cmd_vel_publisher.dir/src/cmd_vel_publisher.cpp.o
+[5.482s] [100%] Linking CXX executable cmd_vel_publisher
+[6.036s] [100%] Built target cmd_vel_publisher
+[6.051s] Invoked command in '/home/kunal/ros2_ws1/build/cybertruck' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/kunal/ros2_ws1/build/cybertruck -- -j8 -l8
+[6.067s] Invoking command in '/home/kunal/ros2_ws1/build/cybertruck': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/cybertruck
+[6.078s] -- Install configuration: ""
+[6.078s] -- Execute custom install script
+[6.079s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/lib/cybertruck/cmd_vel_publisher
+[6.080s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/launch/gazebo.launch.py
+[6.081s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/urdf/cybertruck.urdf.xacro
+[6.081s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/config/controllers.yaml
+[6.082s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/worlds/cybertruck.sdf
+[6.082s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/ament_index/resource_index/package_run_dependencies/cybertruck
+[6.082s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/ament_index/resource_index/parent_prefix_path/cybertruck
+[6.083s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/environment/ament_prefix_path.sh
+[6.083s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/environment/ament_prefix_path.dsv
+[6.083s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/environment/path.sh
+[6.084s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/environment/path.dsv
+[6.084s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/local_setup.bash
+[6.084s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/local_setup.sh
+[6.084s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/local_setup.zsh
+[6.085s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/local_setup.dsv
+[6.085s] -- Symlinking: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/package.dsv
+[6.098s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/ament_index/resource_index/packages/cybertruck
+[6.098s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/cmake/cybertruckConfig.cmake
+[6.098s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/cmake/cybertruckConfig-version.cmake
+[6.099s] -- Up-to-date symlink: /home/kunal/ros2_ws1/install/cybertruck/share/cybertruck/package.xml
+[6.103s] Invoked command in '/home/kunal/ros2_ws1/build/cybertruck' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/kunal/ros2_ws1/build/cybertruck
