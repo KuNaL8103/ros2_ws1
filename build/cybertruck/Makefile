@@ -210,6 +210,32 @@ cmd_vel_publisher/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmd_vel_publisher.dir/build.make CMakeFiles/cmd_vel_publisher.dir/build
 .PHONY : cmd_vel_publisher/fast
 
+#=============================================================================
+# Target rules for targets named scan_frame_fix
+
+# Build rule for target.
+scan_frame_fix: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scan_frame_fix
+.PHONY : scan_frame_fix
+
+# fast build rule for target.
+scan_frame_fix/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scan_frame_fix.dir/build.make CMakeFiles/scan_frame_fix.dir/build
+.PHONY : scan_frame_fix/fast
+
+#=============================================================================
+# Target rules for targets named cmd_vel_relay
+
+# Build rule for target.
+cmd_vel_relay: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd_vel_relay
+.PHONY : cmd_vel_relay
+
+# fast build rule for target.
+cmd_vel_relay/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmd_vel_relay.dir/build.make CMakeFiles/cmd_vel_relay.dir/build
+.PHONY : cmd_vel_relay/fast
+
 src/cmd_vel_publisher.o: src/cmd_vel_publisher.cpp.o
 .PHONY : src/cmd_vel_publisher.o
 
@@ -234,6 +260,54 @@ src/cmd_vel_publisher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmd_vel_publisher.dir/build.make CMakeFiles/cmd_vel_publisher.dir/src/cmd_vel_publisher.cpp.s
 .PHONY : src/cmd_vel_publisher.cpp.s
 
+src/cmd_vel_relay.o: src/cmd_vel_relay.cpp.o
+.PHONY : src/cmd_vel_relay.o
+
+# target to build an object file
+src/cmd_vel_relay.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmd_vel_relay.dir/build.make CMakeFiles/cmd_vel_relay.dir/src/cmd_vel_relay.cpp.o
+.PHONY : src/cmd_vel_relay.cpp.o
+
+src/cmd_vel_relay.i: src/cmd_vel_relay.cpp.i
+.PHONY : src/cmd_vel_relay.i
+
+# target to preprocess a source file
+src/cmd_vel_relay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmd_vel_relay.dir/build.make CMakeFiles/cmd_vel_relay.dir/src/cmd_vel_relay.cpp.i
+.PHONY : src/cmd_vel_relay.cpp.i
+
+src/cmd_vel_relay.s: src/cmd_vel_relay.cpp.s
+.PHONY : src/cmd_vel_relay.s
+
+# target to generate assembly for a file
+src/cmd_vel_relay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmd_vel_relay.dir/build.make CMakeFiles/cmd_vel_relay.dir/src/cmd_vel_relay.cpp.s
+.PHONY : src/cmd_vel_relay.cpp.s
+
+src/scan_frame_fix.o: src/scan_frame_fix.cpp.o
+.PHONY : src/scan_frame_fix.o
+
+# target to build an object file
+src/scan_frame_fix.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scan_frame_fix.dir/build.make CMakeFiles/scan_frame_fix.dir/src/scan_frame_fix.cpp.o
+.PHONY : src/scan_frame_fix.cpp.o
+
+src/scan_frame_fix.i: src/scan_frame_fix.cpp.i
+.PHONY : src/scan_frame_fix.i
+
+# target to preprocess a source file
+src/scan_frame_fix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scan_frame_fix.dir/build.make CMakeFiles/scan_frame_fix.dir/src/scan_frame_fix.cpp.i
+.PHONY : src/scan_frame_fix.cpp.i
+
+src/scan_frame_fix.s: src/scan_frame_fix.cpp.s
+.PHONY : src/scan_frame_fix.s
+
+# target to generate assembly for a file
+src/scan_frame_fix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scan_frame_fix.dir/build.make CMakeFiles/scan_frame_fix.dir/src/scan_frame_fix.cpp.s
+.PHONY : src/scan_frame_fix.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -250,9 +324,17 @@ help:
 	@echo "... cybertruck_uninstall"
 	@echo "... uninstall"
 	@echo "... cmd_vel_publisher"
+	@echo "... cmd_vel_relay"
+	@echo "... scan_frame_fix"
 	@echo "... src/cmd_vel_publisher.o"
 	@echo "... src/cmd_vel_publisher.i"
 	@echo "... src/cmd_vel_publisher.s"
+	@echo "... src/cmd_vel_relay.o"
+	@echo "... src/cmd_vel_relay.i"
+	@echo "... src/cmd_vel_relay.s"
+	@echo "... src/scan_frame_fix.o"
+	@echo "... src/scan_frame_fix.i"
+	@echo "... src/scan_frame_fix.s"
 .PHONY : help
 
 

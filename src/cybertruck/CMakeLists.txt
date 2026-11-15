@@ -8,12 +8,21 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 add_executable(cmd_vel_publisher src/cmd_vel_publisher.cpp)
 ament_target_dependencies(cmd_vel_publisher rclcpp geometry_msgs)
 
+add_executable(scan_frame_fix src/scan_frame_fix.cpp)
+ament_target_dependencies(scan_frame_fix rclcpp sensor_msgs)
+
+add_executable(cmd_vel_relay src/cmd_vel_relay.cpp)
+ament_target_dependencies(cmd_vel_relay rclcpp geometry_msgs)
+
 install(TARGETS
   cmd_vel_publisher
+  scan_frame_fix
+  cmd_vel_relay
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "cmd_vel_publisher"
+			"path" : "cmd_vel_relay"
 		}
 	],
 	"backtrace" : 1,
@@ -73,13 +73,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 12,
+				"line" : 19,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 13,
+				"line" : 20,
 				"parent" : 0
 			},
 			{
@@ -805,7 +805,7 @@
 			]
 		}
 	],
-	"id" : "cmd_vel_publisher::@6890427a1f51a3e7e1df",
+	"id" : "cmd_vel_relay::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -1260,8 +1260,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "cmd_vel_publisher",
-	"nameOnDisk" : "cmd_vel_publisher",
+	"name" : "cmd_vel_relay",
+	"nameOnDisk" : "cmd_vel_relay",
 	"paths" : 
 	{
 		"build" : ".",
@@ -1282,7 +1282,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/cmd_vel_publisher.cpp",
+			"path" : "src/cmd_vel_relay.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

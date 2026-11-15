@@ -315,7 +315,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "cmd_vel_publisher" "DESTINATION" "lib/cybertruck")
+# install("TARGETS" "cmd_vel_publisher" "scan_frame_fix" "cmd_vel_relay" "DESTINATION" "lib/cybertruck")
 include("/home/kunal/ros2_ws1/build/cybertruck/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "urdf" "config" "worlds" "DESTINATION" "share/cybertruck")

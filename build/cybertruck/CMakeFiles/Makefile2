@@ -64,6 +64,8 @@ CMAKE_BINARY_DIR = /home/kunal/ros2_ws1/build/cybertruck
 
 # The main recursive "all" target.
 all: CMakeFiles/cmd_vel_publisher.dir/all
+all: CMakeFiles/scan_frame_fix.dir/all
+all: CMakeFiles/cmd_vel_relay.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,6 +76,8 @@ preinstall:
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/cybertruck_uninstall.dir/clean
 clean: CMakeFiles/cmd_vel_publisher.dir/clean
+clean: CMakeFiles/scan_frame_fix.dir/clean
+clean: CMakeFiles/cmd_vel_relay.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -153,6 +157,58 @@ cmd_vel_publisher: CMakeFiles/cmd_vel_publisher.dir/rule
 CMakeFiles/cmd_vel_publisher.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmd_vel_publisher.dir/build.make CMakeFiles/cmd_vel_publisher.dir/clean
 .PHONY : CMakeFiles/cmd_vel_publisher.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/scan_frame_fix.dir
+
+# All Build rule for target.
+CMakeFiles/scan_frame_fix.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scan_frame_fix.dir/build.make CMakeFiles/scan_frame_fix.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scan_frame_fix.dir/build.make CMakeFiles/scan_frame_fix.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kunal/ros2_ws1/build/cybertruck/CMakeFiles --progress-num=5,6 "Built target scan_frame_fix"
+.PHONY : CMakeFiles/scan_frame_fix.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/scan_frame_fix.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kunal/ros2_ws1/build/cybertruck/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/scan_frame_fix.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kunal/ros2_ws1/build/cybertruck/CMakeFiles 0
+.PHONY : CMakeFiles/scan_frame_fix.dir/rule
+
+# Convenience name for target.
+scan_frame_fix: CMakeFiles/scan_frame_fix.dir/rule
+.PHONY : scan_frame_fix
+
+# clean rule for target.
+CMakeFiles/scan_frame_fix.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scan_frame_fix.dir/build.make CMakeFiles/scan_frame_fix.dir/clean
+.PHONY : CMakeFiles/scan_frame_fix.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/cmd_vel_relay.dir
+
+# All Build rule for target.
+CMakeFiles/cmd_vel_relay.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmd_vel_relay.dir/build.make CMakeFiles/cmd_vel_relay.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmd_vel_relay.dir/build.make CMakeFiles/cmd_vel_relay.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kunal/ros2_ws1/build/cybertruck/CMakeFiles --progress-num=3,4 "Built target cmd_vel_relay"
+.PHONY : CMakeFiles/cmd_vel_relay.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/cmd_vel_relay.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kunal/ros2_ws1/build/cybertruck/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cmd_vel_relay.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kunal/ros2_ws1/build/cybertruck/CMakeFiles 0
+.PHONY : CMakeFiles/cmd_vel_relay.dir/rule
+
+# Convenience name for target.
+cmd_vel_relay: CMakeFiles/cmd_vel_relay.dir/rule
+.PHONY : cmd_vel_relay
+
+# clean rule for target.
+CMakeFiles/cmd_vel_relay.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmd_vel_relay.dir/build.make CMakeFiles/cmd_vel_relay.dir/clean
+.PHONY : CMakeFiles/cmd_vel_relay.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

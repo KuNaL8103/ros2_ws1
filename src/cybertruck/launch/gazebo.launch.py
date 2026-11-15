@@ -9,6 +9,7 @@ from launch.actions import (
     TimerAction,
 )
 from launch.event_handlers import OnProcessExit
+from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, LaunchConfiguration
 from launch_ros.actions import Node
@@ -24,6 +25,7 @@ def generate_launch_description():
         Command(['xacro ', xacro_file]), value_type=str)
 
     gz_args = LaunchConfiguration('gz_args')
+    drive = LaunchConfiguration('drive')
 
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -35,7 +37,19 @@ def generate_launch_description():
     clock_bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
-        arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock'],
+        arguments=[
+            '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
+            '/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
+            '--ros-args',
+            '-r', '/scan:=/scan_raw',
+        ],
+        output='screen',
+    )
+
+    # retag the scan frame from the scoped Gazebo name to lidar_link
+    scan_frame_fix = Node(
+        package='cybertruck',
+        executable='scan_frame_fix',
         output='screen',
     )
 
@@ -77,6 +91,7 @@ def generate_launch_description():
         package='cybertruck',
         executable='cmd_vel_publisher',
         parameters=[{'use_sim_time': True}],
+        condition=IfCondition(drive),
         output='screen',
     )
 
@@ -90,8 +105,12 @@ def generate_launch_description():
         DeclareLaunchArgument(
             'gz_args', default_value='-r ' + world,
             description="Gazebo args; append -s for a headless server"),
+        DeclareLaunchArgument(
+            'drive', default_value='true',
+            description='Start the automatic circle-driving cmd_vel publisher'),
         gazebo,
         clock_bridge,
+        scan_frame_fix,
         rsp,
         delayed_spawn,
         load_jsb,
